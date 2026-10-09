@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hendrix — Natal Chart</title>
+<style>
+:root{
+  --bg:#faf8f5; --bg-2:#fffdfa; --ink:#1c1a17; --ink-2:#4a453e; --dim:#8a8276;
+  --line:#e2dcd2; --line-2:#cfc7b9; --accent:#8a6d3b; --accent-2:#b89155;
+  --fire:#c0552f; --earth:#6b7a3a; --air:#3f7391; --water:#5a5a96;
+  --asp-hard:#b4472e; --asp-soft:#3f7391; --asp-conj:#8a6d3b; --asp-minor:#a79b88;
+  --shadow:0 1px 2px rgba(28,26,23,.06),0 8px 24px rgba(28,26,23,.06);
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --serif:ui-serif,Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root[data-theme="auto"]{
+  --bg:#141311; --bg-2:#1c1a17; --ink:#f0ece5; --ink-2:#c4bcae; --dim:#8a8276;
+  --line:#2e2a25; --line-2:#413b33; --accent:#c9a66b; --accent-2:#e0bf85;
+  --fire:#e07a52; --earth:#9db25c; --air:#6aa8c9; --water:#8d8dd0;
+  --asp-hard:#e07a52; --asp-soft:#6aa8c9; --asp-conj:#c9a66b; --asp-minor:#6e665a;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
+}}
+:root[data-theme="dark"]{
+  --bg:#141311; --bg-2:#1c1a17; --ink:#f0ece5; --ink-2:#c4bcae; --dim:#8a8276;
+  --line:#2e2a25; --line-2:#413b33; --accent:#c9a66b; --accent-2:#e0bf85;
+  --fire:#e07a52; --earth:#9db25c; --air:#6aa8c9; --water:#8d8dd0;
+  --asp-hard:#e07a52; --asp-soft:#6aa8c9; --asp-conj:#c9a66b; --asp-minor:#6e665a;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px 120px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);margin:0 0 .2em}
+h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 .5em}
+h3{font-size:1.1rem;margin:0}
+.muted{color:var(--dim)}
+em{font-style:italic;color:var(--ink-2)}
+
+header.top{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+.birth{font-family:var(--mono);font-size:.84rem;color:var(--ink-2);margin:.2em 0}
+.trinity{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
+.tri{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:14px 20px;box-shadow:var(--shadow)}
+.tri span{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.tri strong{font-family:var(--serif);font-size:1.3rem;font-weight:600}
+
+nav.toc{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-bottom:56px}
+nav.toc ul{display:flex;gap:4px;list-style:none;margin:0;padding:10px 0;overflow-x:auto}
+nav.toc a{font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--ink-2);
+  text-decoration:none;padding:7px 13px;border-radius:999px;white-space:nowrap}
+nav.toc a:hover{background:var(--bg-2);color:var(--ink)}
+.themebtn{margin-left:auto;flex:none;background:none;border:1px solid var(--line);color:var(--ink-2);
+  border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:.72rem;cursor:pointer}
+.themebtn:hover{border-color:var(--accent);color:var(--accent)}
+
+section{margin:0 0 84px;scroll-margin-top:70px}
+.lead{font-family:var(--serif);font-size:1.18rem;color:var(--ink-2);max-width:66ch}
+
+.wheelgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:44px;align-items:start}
+@media(max-width:900px){.wheelgrid{grid-template-columns:1fr}}
+.wheelbox{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:var(--shadow)}
+svg.wheel{width:100%;height:auto;display:block}
+.ring{fill:none;stroke:var(--line-2);stroke-width:1}
+.ring-inner{stroke:var(--line)}
+.spoke-sign{stroke:var(--line-2);stroke-width:1}
+.spoke-house{stroke:var(--line);stroke-width:1}
+.spoke-major{stroke:var(--accent);stroke-width:1.6}
+.glyph-sign{font-size:21px;text-anchor:middle;dominant-baseline:central}
+.glyph-sign[data-el="Fire"]{fill:var(--fire)} .glyph-sign[data-el="Earth"]{fill:var(--earth)}
+.glyph-sign[data-el="Air"]{fill:var(--air)}   .glyph-sign[data-el="Water"]{fill:var(--water)}
+.house-num{font-family:var(--mono);font-size:12px;fill:var(--dim);text-anchor:middle;dominant-baseline:central}
+.angle-lab{font-family:var(--mono);font-size:12px;font-weight:700;fill:var(--accent);text-anchor:middle;dominant-baseline:central}
+.glyph-planet{font-size:22px;fill:var(--ink);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.glyph-deg{font-family:var(--mono);font-size:9.5px;fill:var(--dim);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.planet-hit{fill:transparent;cursor:pointer}
+.planet:hover .planet-hit,.planet:focus .planet-hit{fill:color-mix(in srgb,var(--accent) 18%,transparent)}
+.planet:focus{outline:none}
+.tick{stroke:var(--line-2);stroke-width:.6}
+.asp-line{pointer-events:none;transition:opacity .18s}
+svg.wheel.dim .asp-line{opacity:.06!important}
+svg.wheel.dim .asp-line.on{opacity:.95!important;stroke-width:2.4!important}
+
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:500}
+td.g{font-size:1.15rem;width:1.8em;color:var(--accent)}
+tr.row-body:hover,tr.row-asp:hover{background:var(--bg-2)}
+tr.row-asp{cursor:pointer}
+tr.row-asp.on{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.rx{color:var(--asp-hard);font-weight:700}
+.pill{font-family:var(--mono);font-size:.72rem;padding:2px 9px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2)}
+.pill-h{cursor:pointer}
+.pill-h:hover{border-color:var(--accent);color:var(--accent)}
+.orb{font-family:var(--mono);white-space:nowrap}
+.orbbar{display:inline-block;width:34px;height:4px;border-radius:2px;margin-right:7px;vertical-align:middle;
+  background:linear-gradient(90deg,var(--accent) calc(var(--s)*100%),var(--line) 0)}
+td.work{max-width:30ch;font-size:.82rem;line-height:1.5}
+.asp-g{font-size:1.1rem}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+.card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow);
+  transition:border-color .2s,transform .2s}
+.card.flash{border-color:var(--accent);transform:translateY(-2px)}
+.house-card header{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
+.hnum{font-family:var(--serif);font-size:2rem;line-height:1;color:var(--accent-2);min-width:1.4em}
+.tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:3px 0 0}
+.cusp{margin-left:auto;font-family:var(--mono);font-size:.74rem;color:var(--ink-2);text-align:right;white-space:nowrap}
+.q{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--accent);margin:0 0 10px}
+.domain{font-size:.88rem;color:var(--ink-2);margin:0 0 10px}
+.onthecusp{font-size:.84rem;color:var(--ink-2);margin:0 0 14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.occupants{display:flex;flex-direction:column;gap:12px}
+.occ{display:flex;gap:11px;align-items:flex-start;font-size:.86rem}
+.occ .g{font-size:1.25rem;color:var(--accent);line-height:1.2}
+.occ p{margin:3px 0 0;font-size:.8rem;line-height:1.5}
+.empty{font-size:.84rem;color:var(--dim);font-style:italic;margin:0}
+
+.bar-row{display:grid;grid-template-columns:5.5em 1fr 2em minmax(0,15em);gap:12px;align-items:center;
+  padding:7px 0;font-size:.86rem}
+@media(max-width:700px){.bar-row{grid-template-columns:5em 1fr 2em}.bar-note{display:none}}
+.bar-lab{font-family:var(--mono);font-size:.74rem;color:var(--ink-2)}
+.bar-track{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar-fill{display:block;height:100%;width:var(--pct);background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:4px}
+.bar-val{font-family:var(--mono);font-size:.78rem;color:var(--ink-2)}
+.bar-note{font-size:.76rem}
+
+.note{background:var(--bg-2);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;padding:18px 22px;margin:26px 0;font-size:.92rem}
+.note strong{color:var(--accent)}
+.prose{max-width:68ch}
+.prose p{margin:0 0 1.1em}
+footer{border-top:1px solid var(--line);padding:30px 0;font-family:var(--mono);font-size:.72rem;color:var(--dim)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin:16px 0 0;font-family:var(--mono);font-size:.72rem;color:var(--dim)}
+.legend i{display:inline-block;width:16px;height:2px;margin-right:6px;vertical-align:middle}
+</style>
+</head>
+<body>
+<nav class="toc"><div class="wrap"><ul>
+  <li><a href="#wheel">Wheel</a></li>
+  <li><a href="#angles">Angles</a></li>
+  <li><a href="#placements">Placements</a></li>
+  <li><a href="#houses">The Twelve Houses</a></li>
+  <li><a href="#aspects">Aspects</a></li>
+  <li><a href="#balance">Balance</a></li>
+  <li><a href="#reading">The Reading</a></li>
+  <li><button class="themebtn" id="tb">theme</button></li>
+</ul></div></nav>
+
+<div class="wrap">
+<header class="top">
+  <p class="eyebrow">Natal Chart · Placidus Houses · Computed Locally</p>
+  <h1>Hendrix</h1>
+  <p class="birth">March 21, 2016 at 8:29 PM · Los Angeles, California, USA</p>
+  <p class="birth">America/Los_Angeles · 34.0522°N 118.2437°W</p>
+  <div class="trinity">
+    <div class="tri"><span>Sun</span><strong>Aries</strong></div>
+    <div class="tri"><span>Moon</span><strong>Virgo</strong></div>
+    <div class="tri"><span>Rising</span><strong>Libra</strong></div>
+    <div class="tri"><span>Chart Ruler</span><strong>Venus</strong></div>
+    <div class="tri"><span>Midheaven</span><strong>Cancer</strong></div>
+  </div>
+</header>
+
+<section id="wheel">
+  <h2>The Wheel</h2>
+  <p class="lead">Click any planet to isolate its aspects. Click a house number in the tables to jump to that house.
+     The outer band is the zodiac, coloured by element. The inner spokes are your Placidus house cusps, which are
+     unequal because houses are a projection of a tilted, spinning Earth, not twelve equal slices.</p>
+  <div class="wheelgrid">
+    <div class="wheelbox"><svg viewBox="0 0 680 680" class="wheel" role="img" aria-label="Natal chart wheel"><circle cx="340" cy="340" r="330" class="ring"/><circle cx="340" cy="340" r="300" class="ring"/><circle cx="340" cy="340" r="250" class="ring"/><circle cx="340" cy="340" r="170" class="ring ring-inner"/><line x1="621.5" y1="443.8" x2="649.6" y2="454.2" class="spoke-sign"/><text x="653.7" y="368.8" class="glyph-sign" data-el="Fire">♈</text><line x1="635.7" y1="289.1" x2="665.2" y2="284.1" class="spoke-sign"/><text x="626.0" y="208.1" class="glyph-sign" data-el="Earth">♉</text><line x1="570.6" y1="148.1" x2="593.7" y2="128.9" class="spoke-sign"/><text x="521.8" y="82.7" class="glyph-sign" data-el="Air">♊</text><line x1="443.8" y1="58.5" x2="454.2" y2="30.4" class="spoke-sign"/><text x="368.8" y="26.3" class="glyph-sign" data-el="Water">♋</text><line x1="289.1" y1="44.3" x2="284.1" y2="14.8" class="spoke-sign"/><text x="208.1" y="54.0" class="glyph-sign" data-el="Fire">♌</text><line x1="148.1" y1="109.4" x2="128.9" y2="86.3" class="spoke-sign"/><text x="82.7" y="158.2" class="glyph-sign" data-el="Earth">♍</text><line x1="58.5" y1="236.2" x2="30.4" y2="225.8" class="spoke-sign"/><text x="26.3" y="311.2" class="glyph-sign" data-el="Air">♎</text><line x1="44.3" y1="390.9" x2="14.8" y2="395.9" class="spoke-sign"/><text x="54.0" y="471.9" class="glyph-sign" data-el="Water">♏</text><line x1="109.4" y1="531.9" x2="86.3" y2="551.1" class="spoke-sign"/><text x="158.2" y="597.3" class="glyph-sign" data-el="Fire">♐</text><line x1="236.2" y1="621.5" x2="225.8" y2="649.6" class="spoke-sign"/><text x="311.2" y="653.7" class="glyph-sign" data-el="Earth">♑</text><line x1="390.9" y1="635.7" x2="395.9" y2="665.2" class="spoke-sign"/><text x="471.9" y="626.0" class="glyph-sign" data-el="Air">♒</text><line x1="531.9" y1="570.6" x2="551.1" y2="593.7" class="spoke-sign"/><text x="597.3" y="521.8" class="glyph-sign" data-el="Water">♓</text><line x1="170.0" y1="340.0" x2="90.0" y2="340.0" class="spoke-house spoke-major"/><text x="101.4" y="399.9" class="house-num" data-house="1">1</text><line x1="190.2" y1="420.3" x2="119.7" y2="458.1" class="spoke-house"/><text x="162.1" y="509.9" class="house-num" data-house="2">2</text><line x1="253.0" y1="486.0" x2="212.0" y2="554.7" class="spoke-house"/><text x="278.9" y="578.3" class="house-num" data-house="3">3</text><line x1="346.1" y1="509.9" x2="349.0" y2="589.8" class="spoke-house spoke-major"/><text x="417.4" y="573.5" class="house-num" data-house="4">4</text><line x1="436.5" y1="479.9" x2="482.0" y2="545.8" class="spoke-house"/><text x="527.0" y="499.8" class="house-num" data-house="5">5</text><line x1="493.3" y1="413.6" x2="565.4" y2="448.2" class="spoke-house"/><text x="579.9" y="394.6" class="house-num" data-house="6">6</text><line x1="510.0" y1="340.0" x2="590.0" y2="340.0" class="spoke-house spoke-major"/><text x="578.6" y="280.1" class="house-num" data-house="7">7</text><line x1="489.8" y1="259.7" x2="560.3" y2="221.9" class="spoke-house"/><text x="517.9" y="170.1" class="house-num" data-house="8">8</text><line x1="427.0" y1="194.0" x2="468.0" y2="125.3" class="spoke-house"/><text x="401.1" y="101.7" class="house-num" data-house="9">9</text><line x1="333.9" y1="170.1" x2="331.0" y2="90.2" class="spoke-house spoke-major"/><text x="262.6" y="106.5" class="house-num" data-house="10">10</text><line x1="243.5" y1="200.1" x2="198.0" y2="134.2" class="spoke-house"/><text x="153.0" y="180.2" class="house-num" data-house="11">11</text><line x1="186.7" y1="266.4" x2="114.6" y2="231.8" class="spoke-house"/><text x="100.1" y="285.4" class="house-num" data-house="12">12</text><text x="-12.0" y="340.0" class="angle-lab">AC</text><text x="327.4" y="-11.8" class="angle-lab">MC</text><text x="692.0" y="340.0" class="angle-lab">DC</text><text x="352.6" y="691.8" class="angle-lab">IC</text><line x1="499.8" y1="398.1" x2="571.2" y2="424.1" class="tick"/><g class="planet" data-body="Mercury" tabindex="0"><circle cx="544.9" cy="414.5" r="15" class="planet-hit"/><text x="544.9" y="414.5" class="glyph-planet">☿</text><text x="544.9" y="434.5" class="glyph-deg">0°</text></g><line x1="501.4" y1="393.4" x2="573.6" y2="417.2" class="tick"/><g class="planet" data-body="Sun" tabindex="0"><circle cx="518.5" cy="399.0" r="15" class="planet-hit"/><text x="518.5" y="399.0" class="glyph-planet">☉</text><text x="518.5" y="419.0" class="glyph-deg">1°</text></g><line x1="510.0" y1="342.5" x2="586.0" y2="343.6" class="tick"/><g class="planet" data-body="Uranus" tabindex="0"><circle cx="558.0" cy="343.2" r="15" class="planet-hit"/><text x="558.0" y="343.2" class="glyph-planet">♅</text><text x="558.0" y="363.2" class="glyph-deg">19°</text></g><line x1="198.5" y1="245.7" x2="135.3" y2="203.6" class="tick"/><g class="planet" data-body="Jupiter" tabindex="0"><circle cx="158.6" cy="219.1" r="15" class="planet-hit"/><text x="158.6" y="219.1" class="glyph-planet">♃</text><text x="158.6" y="239.1" class="glyph-deg">16° ℞</text></g><line x1="197.7" y1="247.0" x2="134.1" y2="205.5" class="tick"/><g class="planet" data-body="Moon" tabindex="0"><circle cx="182.6" cy="237.2" r="15" class="planet-hit"/><text x="182.6" y="237.2" class="glyph-planet">☽</text><text x="182.6" y="257.2" class="glyph-deg">17°</text></g><line x1="190.5" y1="259.1" x2="123.6" y2="223.0" class="tick"/><g class="planet" data-body="NorthNode" tabindex="0"><circle cx="201.0" cy="264.8" r="15" class="planet-hit"/><text x="201.0" y="264.8" class="glyph-planet">☊</text><text x="201.0" y="284.8" class="glyph-deg">21° ℞</text></g><line x1="219.6" y1="460.0" x2="165.7" y2="513.6" class="tick"/><g class="planet" data-body="Mars" tabindex="0"><circle cx="185.6" cy="493.9" r="15" class="planet-hit"/><text x="185.6" y="493.9" class="glyph-planet">♂</text><text x="185.6" y="513.9" class="glyph-deg">5°</text></g><line x1="245.3" y1="481.2" x2="203.0" y2="544.3" class="tick"/><g class="planet" data-body="Saturn" tabindex="0"><circle cx="218.6" cy="521.1" r="15" class="planet-hit"/><text x="218.6" y="521.1" class="glyph-planet">♄</text><text x="218.6" y="541.1" class="glyph-deg">16°</text></g><line x1="331.3" y1="509.8" x2="327.4" y2="585.7" class="tick"/><g class="planet" data-body="Pluto" tabindex="0"><circle cx="328.8" cy="557.7" r="15" class="planet-hit"/><text x="328.8" y="557.7" class="glyph-planet">♇</text><text x="328.8" y="577.7" class="glyph-deg">17°</text></g><line x1="470.4" y1="449.1" x2="528.7" y2="497.8" class="tick"/><g class="planet" data-body="Neptune" tabindex="0"><circle cx="507.2" cy="479.9" r="15" class="planet-hit"/><text x="507.2" y="479.9" class="glyph-planet">♆</text><text x="507.2" y="499.9" class="glyph-deg">10°</text></g><line x1="473.5" y1="445.2" x2="533.2" y2="492.2" class="tick"/><g class="planet" data-body="Venus" tabindex="0"><circle cx="487.7" cy="456.3" r="15" class="planet-hit"/><text x="487.7" y="456.3" class="glyph-planet">♀</text><text x="487.7" y="476.3" class="glyph-deg">12°</text></g><line x1="489.1" y1="421.7" x2="555.7" y2="458.2" class="tick"/><g class="planet" data-body="Chiron" tabindex="0"><circle cx="531.2" cy="444.8" r="15" class="planet-hit"/><text x="531.2" y="444.8" class="glyph-planet">⚷</text><text x="531.2" y="464.8" class="glyph-deg">21°</text></g><line x1="198.5" y1="245.7" x2="245.3" y2="481.2" class="asp-line" data-a="Jupiter" data-b="Saturn" data-aspect="Square" stroke="var(--asp-hard)" stroke-width="2.55" opacity="0.79"/><line x1="197.7" y1="247.0" x2="331.3" y2="509.8" class="asp-line" data-a="Moon" data-b="Pluto" data-aspect="Trine" stroke="var(--asp-soft)" stroke-width="2.54" opacity="0.78"/><line x1="489.1" y1="421.7" x2="190.5" y2="259.1" class="asp-line" data-a="Chiron" data-b="NorthNode" data-aspect="Opposition" stroke="var(--asp-hard)" stroke-width="2.52" opacity="0.78"/><line x1="197.7" y1="247.0" x2="198.5" y2="245.7" class="asp-line" data-a="Moon" data-b="Jupiter" data-aspect="Conjunction" stroke="var(--asp-conj)" stroke-width="2.47" opacity="0.76"/><line x1="197.7" y1="247.0" x2="245.3" y2="481.2" class="asp-line" data-a="Moon" data-b="Saturn" data-aspect="Square" stroke="var(--asp-hard)" stroke-width="2.40" opacity="0.75"/><line x1="198.5" y1="245.7" x2="331.3" y2="509.8" class="asp-line" data-a="Jupiter" data-b="Pluto" data-aspect="Trine" stroke="var(--asp-soft)" stroke-width="2.39" opacity="0.74"/><line x1="245.3" y1="481.2" x2="331.3" y2="509.8" class="asp-line" data-a="Saturn" data-b="Pluto" data-aspect="Semisextile" stroke="var(--asp-minor)" stroke-width="1.70" opacity="0.55"/><line x1="501.4" y1="393.4" x2="499.8" y2="398.1" class="asp-line" data-a="Sun" data-b="Mercury" data-aspect="Conjunction" stroke="var(--asp-conj)" stroke-width="2.18" opacity="0.68"/><line x1="473.5" y1="445.2" x2="470.4" y2="449.1" class="asp-line" data-a="Venus" data-b="Neptune" data-aspect="Conjunction" stroke="var(--asp-conj)" stroke-width="2.18" opacity="0.68"/><line x1="510.0" y1="342.5" x2="331.3" y2="509.8" class="asp-line" data-a="Uranus" data-b="Pluto" data-aspect="Square" stroke="var(--asp-hard)" stroke-width="2.00" opacity="0.64"/><line x1="197.7" y1="247.0" x2="510.0" y2="342.5" class="asp-line" data-a="Moon" data-b="Uranus" data-aspect="Quincunx" stroke="var(--asp-minor)" stroke-width="1.06" opacity="0.38"/><line x1="510.0" y1="342.5" x2="190.5" y2="259.1" class="asp-line" data-a="Uranus" data-b="NorthNode" data-aspect="Quincunx" stroke="var(--asp-minor)" stroke-width="0.97" opacity="0.35"/><line x1="198.5" y1="245.7" x2="510.0" y2="342.5" class="asp-line" data-a="Jupiter" data-b="Uranus" data-aspect="Quincunx" stroke="var(--asp-minor)" stroke-width="0.71" opacity="0.28"/><line x1="245.3" y1="481.2" x2="510.0" y2="342.5" class="asp-line" data-a="Saturn" data-b="Uranus" data-aspect="Trine" stroke="var(--asp-soft)" stroke-width="1.74" opacity="0.56"/><line x1="501.4" y1="393.4" x2="219.6" y2="460.0" class="asp-line" data-a="Sun" data-b="Mars" data-aspect="Trine" stroke="var(--asp-soft)" stroke-width="1.69" opacity="0.55"/><line x1="331.3" y1="509.8" x2="489.1" y2="421.7" class="asp-line" data-a="Pluto" data-b="Chiron" data-aspect="Sextile" stroke="var(--asp-soft)" stroke-width="0.91" opacity="0.34"/><line x1="473.5" y1="445.2" x2="245.3" y2="481.2" class="asp-line" data-a="Venus" data-b="Saturn" data-aspect="Square" stroke="var(--asp-hard)" stroke-width="1.35" opacity="0.46"/><line x1="197.7" y1="247.0" x2="489.1" y2="421.7" class="asp-line" data-a="Moon" data-b="Chiron" data-aspect="Opposition" stroke="var(--asp-hard)" stroke-width="1.49" opacity="0.49"/><line x1="331.3" y1="509.8" x2="190.5" y2="259.1" class="asp-line" data-a="Pluto" data-b="NorthNode" data-aspect="Trine" stroke="var(--asp-soft)" stroke-width="1.30" opacity="0.44"/><line x1="473.5" y1="445.2" x2="198.5" y2="245.7" class="asp-line" data-a="Venus" data-b="Jupiter" data-aspect="Opposition" stroke="var(--asp-hard)" stroke-width="1.46" opacity="0.49"/><line x1="197.7" y1="247.0" x2="190.5" y2="259.1" class="asp-line" data-a="Moon" data-b="NorthNode" data-aspect="Conjunction" stroke="var(--asp-conj)" stroke-width="1.41" opacity="0.47"/><line x1="499.8" y1="398.1" x2="219.6" y2="460.0" class="asp-line" data-a="Mercury" data-b="Mars" data-aspect="Trine" stroke="var(--asp-soft)" stroke-width="1.21" opacity="0.42"/><line x1="198.5" y1="245.7" x2="489.1" y2="421.7" class="asp-line" data-a="Jupiter" data-b="Chiron" data-aspect="Opposition" stroke="var(--asp-hard)" stroke-width="1.36" opacity="0.46"/><line x1="197.7" y1="247.0" x2="473.5" y2="445.2" class="asp-line" data-a="Moon" data-b="Venus" data-aspect="Opposition" stroke="var(--asp-hard)" stroke-width="1.33" opacity="0.45"/><line x1="245.3" y1="481.2" x2="489.1" y2="421.7" class="asp-line" data-a="Saturn" data-b="Chiron" data-aspect="Square" stroke="var(--asp-hard)" stroke-width="1.14" opacity="0.40"/><line x1="219.6" y1="460.0" x2="470.4" y2="449.1" class="asp-line" data-a="Mars" data-b="Neptune" data-aspect="Square" stroke="var(--asp-hard)" stroke-width="1.12" opacity="0.39"/><line x1="198.5" y1="245.7" x2="190.5" y2="259.1" class="asp-line" data-a="Jupiter" data-b="NorthNode" data-aspect="Conjunction" stroke="var(--asp-conj)" stroke-width="1.28" opacity="0.44"/><line x1="245.3" y1="481.2" x2="190.5" y2="259.1" class="asp-line" data-a="Saturn" data-b="NorthNode" data-aspect="Square" stroke="var(--asp-hard)" stroke-width="1.05" opacity="0.37"/><line x1="245.3" y1="481.2" x2="470.4" y2="449.1" class="asp-line" data-a="Saturn" data-b="Neptune" data-aspect="Square" stroke="var(--asp-hard)" stroke-width="0.87" opacity="0.32"/><line x1="198.5" y1="245.7" x2="470.4" y2="449.1" class="asp-line" data-a="Jupiter" data-b="Neptune" data-aspect="Opposition" stroke="var(--asp-hard)" stroke-width="1.04" opacity="0.37"/><line x1="197.7" y1="247.0" x2="470.4" y2="449.1" class="asp-line" data-a="Moon" data-b="Neptune" data-aspect="Opposition" stroke="var(--asp-hard)" stroke-width="0.91" opacity="0.34"/><line x1="473.5" y1="445.2" x2="219.6" y2="460.0" class="asp-line" data-a="Venus" data-b="Mars" data-aspect="Square" stroke="var(--asp-hard)" stroke-width="0.63" opacity="0.26"/></svg></div>
+    <div>
+      <h3 style="margin-bottom:14px">How to read this</h3>
+      <div class="prose">
+        <p><strong>The left-hand point is your Ascendant</strong>, Libra 20°14'.
+           That is the degree of the zodiac that was climbing over the eastern horizon at the minute you were born.
+           Everything counts counterclockwise from there.</p>
+        <p><strong>The bottom is the IC</strong> and the top is the <strong>Midheaven</strong>, Cancer 22°18'.
+           Planets near the top were high in the sky at your birth. Planets near the bottom were underneath the Earth.</p>
+        <p><strong>The lines across the middle are aspects</strong>, the geometric relationships between planets.
+           Red is friction, blue is flow, gold is fusion, grey is minor. Thicker means tighter.</p>
+      </div>
+      <div class="legend">
+        <span><i style="background:var(--asp-hard)"></i>square / opposition</span>
+        <span><i style="background:var(--asp-soft)"></i>trine / sextile</span>
+        <span><i style="background:var(--asp-conj)"></i>conjunction</span>
+        <span><i style="background:var(--asp-minor)"></i>minor</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="angles">
+  <h2>The Four Angles</h2>
+  <p class="lead">The angles are not planets. They are the orientation of the sky to the exact spot of ground you
+     were born on, which is why your birth time and city matter so much. Change the minute and these move.</p>
+  <div class="cards">
+    <article class="card">
+      <header><span class="hnum">AC</span><div><h3>Ascendant</h3><p class="tag">Libra 20°14'</p></div></header>
+      <p class="domain">The rising sign. Your interface, your arrival, the body and manner you move the world through.
+         Relational, weighing, allergic to imbalance. Its ruler, <strong>Venus</strong>, is the
+         <em>chart ruler</em>: the single planet that sets the agenda for the whole chart. Yours sits in
+         <strong>Pisces 12°01'</strong>, in the <strong>5th house</strong>.</p>
+    </article>
+    <article class="card">
+      <header><span class="hnum">DC</span><div><h3>Descendant</h3><p class="tag">Aries 20°14'</p></div></header>
+      <p class="domain">Exactly opposite the Ascendant. What you meet in other people, and the quality you tend to
+         outsource to a partner rather than carry yourself. Initiating, direct, impatient with preamble.</p>
+    </article>
+    <article class="card">
+      <header><span class="hnum">MC</span><div><h3>Midheaven</h3><p class="tag">Cancer 22°18'</p></div></header>
+      <p class="domain">The highest point of the sky at your birth. Your public role, your vocation, what you are
+         visibly for. Protective, tidal, oriented to belonging.</p>
+    </article>
+    <article class="card">
+      <header><span class="hnum">IC</span><div><h3>Imum Coeli</h3><p class="tag">Capricorn 22°18'</p></div></header>
+      <p class="domain">The lowest point, directly beneath you at birth. Root, lineage, the private floor of the self
+         that only the people who live with you ever see. Structural, patient, built for the long climb.</p>
+    </article>
+  </div>
+</section>
+
+<section id="placements">
+  <h2>Placements</h2>
+  <p class="lead">Every body, its sign, its exact degree, and the house it falls in.
+     <span class="rx">℞</span> marks retrograde motion, which turns a planet's function inward.</p>
+  <table>
+    <thead><tr><th></th><th>Body</th><th>Sign &amp; Degree</th><th>House</th><th>Element &amp; Mode</th></tr></thead>
+    <tbody>
+    <tr class="row-body" data-body="Sun">
+      <td class="g">☉</td>
+      <td><strong>Sun</strong>
+          <span class="muted">identity</span></td>
+      <td>Aries 1°57'</td>
+      <td><span class="pill pill-h" data-house="6">6th</span></td>
+      <td class="muted">Fire · Cardinal</td>
+    </tr>
+    <tr class="row-body" data-body="Moon">
+      <td class="g">☽</td>
+      <td><strong>Moon</strong>
+          <span class="muted">need</span></td>
+      <td>Virgo 17°05'</td>
+      <td><span class="pill pill-h" data-house="11">11th</span></td>
+      <td class="muted">Earth · Mutable</td>
+    </tr>
+    <tr class="row-body" data-body="Mercury">
+      <td class="g">☿</td>
+      <td><strong>Mercury</strong>
+          <span class="muted">mind</span></td>
+      <td>Aries 0°16'</td>
+      <td><span class="pill pill-h" data-house="6">6th</span></td>
+      <td class="muted">Fire · Cardinal</td>
+    </tr>
+    <tr class="row-body" data-body="Venus">
+      <td class="g">♀</td>
+      <td><strong>Venus</strong>
+          <span class="muted">love</span></td>
+      <td>Pisces 12°01'</td>
+      <td><span class="pill pill-h" data-house="5">5th</span></td>
+      <td class="muted">Water · Mutable</td>
+    </tr>
+    <tr class="row-body" data-body="Mars">
+      <td class="g">♂</td>
+      <td><strong>Mars</strong>
+          <span class="muted">drive</span></td>
+      <td>Sagittarius 5°08'</td>
+      <td><span class="pill pill-h" data-house="2">2nd</span></td>
+      <td class="muted">Fire · Mutable</td>
+    </tr>
+    <tr class="row-body" data-body="Jupiter">
+      <td class="g">♃</td>
+      <td><strong>Jupiter</strong>
+          <span class="muted">expansion</span></td>
+      <td>Virgo 16°34' <span class="rx">℞</span></td>
+      <td><span class="pill pill-h" data-house="11">11th</span></td>
+      <td class="muted">Earth · Mutable</td>
+    </tr>
+    <tr class="row-body" data-body="Saturn">
+      <td class="g">♄</td>
+      <td><strong>Saturn</strong>
+          <span class="muted">limit</span></td>
+      <td>Sagittarius 16°24'</td>
+      <td><span class="pill pill-h" data-house="2">2nd</span></td>
+      <td class="muted">Fire · Mutable</td>
+    </tr>
+    <tr class="row-body" data-body="Uranus">
+      <td class="g">♅</td>
+      <td><strong>Uranus</strong>
+          <span class="muted">disruption</span></td>
+      <td>Aries 19°24'</td>
+      <td><span class="pill pill-h" data-house="6">6th</span></td>
+      <td class="muted">Fire · Cardinal</td>
+    </tr>
+    <tr class="row-body" data-body="Neptune">
+      <td class="g">♆</td>
+      <td><strong>Neptune</strong>
+          <span class="muted">vision</span></td>
+      <td>Pisces 10°20'</td>
+      <td><span class="pill pill-h" data-house="5">5th</span></td>
+      <td class="muted">Water · Mutable</td>
+    </tr>
+    <tr class="row-body" data-body="Pluto">
+      <td class="g">♇</td>
+      <td><strong>Pluto</strong>
+          <span class="muted">power</span></td>
+      <td>Capricorn 17°18'</td>
+      <td><span class="pill pill-h" data-house="3">3rd</span></td>
+      <td class="muted">Earth · Cardinal</td>
+    </tr>
+    <tr class="row-body" data-body="Chiron">
+      <td class="g">⚷</td>
+      <td><strong>Chiron</strong>
+          <span class="muted">wound</span></td>
+      <td>Pisces 21°31'</td>
+      <td><span class="pill pill-h" data-house="5">5th</span></td>
+      <td class="muted">Water · Mutable</td>
+    </tr>
+    <tr class="row-body" data-body="NorthNode">
+      <td class="g">☊</td>
+      <td><strong>North Node</strong>
+          <span class="muted">growth</span></td>
+      <td>Virgo 21°50' <span class="rx">℞</span></td>
+      <td><span class="pill pill-h" data-house="11">11th</span></td>
+      <td class="muted">Earth · Mutable</td>
+    </tr>
+    <tr class="row-body" data-body="SouthNode">
+      <td class="g">☋</td>
+      <td><strong>South Node</strong>
+          <span class="muted">release</span></td>
+      <td>Pisces 21°50' <span class="rx">℞</span></td>
+      <td><span class="pill pill-h" data-house="5">5th</span></td>
+      <td class="muted">Water · Mutable</td>
+    </tr></tbody>
+  </table>
+  <div class="note"><strong>Stelliums:</strong> <strong>3 planets in Aries</strong> (Sun, Mercury, Uranus) · <strong>3 planets in Pisces</strong> (Venus, Neptune, Chiron) · <strong>3 planets in the 5th house</strong> (Venus, Neptune, Chiron) · <strong>3 planets in the 6th house</strong> (Sun, Mercury, Uranus).
+     A stellium is a pile-up: three or more planets in one sign or house, which makes that part of life
+     disproportionately loud.</div>
+</section>
+
+<section id="houses">
+  <h2>The Twelve Houses</h2>
+  <p class="lead">The signs say <em>how</em>. The planets say <em>what</em>. The houses say <em>where</em> — which
+     arena of actual life the thing plays out in. This is the layer most people skip, and it is the layer that makes
+     a chart stop being generic.</p>
+  <div class="cards">
+    <article class="card house-card" id="house-1" data-house="1">
+      <header>
+        <span class="hnum">1</span>
+        <div>
+          <h3>First House</h3>
+          <p class="tag">Self & Body</p>
+        </div>
+        <span class="cusp">Libra 20°14'</span>
+      </header>
+      <p class="q">Who am I when I walk in?</p>
+      <p class="domain">how you arrive, your face to the world, the body you live in, the first ten seconds of you.</p>
+      <p class="onthecusp"><strong>Libra</strong> on the cusp means this area of life runs
+         <em>relational, weighing, allergic to imbalance</em>, and its affairs are governed by <strong>Venus</strong>
+         , which sits in Pisces 12°01' in your 5th house.</p>
+      <p class="empty">No planets here. An empty house is not an empty life: the affairs of this house
+             are handled through <strong>Venus</strong> wherever it sits, and they tend to run quietly
+             rather than loudly.</p>
+    </article>
+    <article class="card house-card" id="house-2" data-house="2">
+      <header>
+        <span class="hnum">2</span>
+        <div>
+          <h3>Second House</h3>
+          <p class="tag">Resources & Worth</p>
+        </div>
+        <span class="cusp">Scorpio 18°26'</span>
+      </header>
+      <p class="q">What is mine, and what am I worth?</p>
+      <p class="domain">money, possessions, the body as resource, and what you believe you are worth.</p>
+      <p class="onthecusp"><strong>Scorpio</strong> on the cusp means this area of life runs
+         <em>penetrating, private, unwilling to skim</em>, and its affairs are governed by <strong>Pluto</strong>
+         , which sits in Capricorn 17°18' in your 3rd house.</p>
+      <div class="occupants">
+        <div class="occ"><span class="g">♂</span>
+          <div><strong>Mars</strong>
+          in Sagittarius 5°08'
+          <p class="muted">Your <strong>drive, anger, and how you take action</strong> operates in a <em>seeking, wide, hungry for the bigger frame</em> way, and it does its work in the arena of money, possessions, the body as resource, and what you believe you are worth.</p></div></div>
+        <div class="occ"><span class="g">♄</span>
+          <div><strong>Saturn</strong>
+          in Sagittarius 16°24'
+          <p class="muted">Your <strong>limit, discipline, and the place you must earn it</strong> operates in a <em>seeking, wide, hungry for the bigger frame</em> way, and it does its work in the arena of money, possessions, the body as resource, and what you believe you are worth.</p></div></div></div>
+    </article>
+    <article class="card house-card" id="house-3" data-house="3">
+      <header>
+        <span class="hnum">3</span>
+        <div>
+          <h3>Third House</h3>
+          <p class="tag">Voice & Learning</p>
+        </div>
+        <span class="cusp">Sagittarius 19°26'</span>
+      </header>
+      <p class="q">How do I say it?</p>
+      <p class="domain">speech, writing, siblings, the near environment, how you take in and pass on information.</p>
+      <p class="onthecusp"><strong>Sagittarius</strong> on the cusp means this area of life runs
+         <em>seeking, wide, hungry for the bigger frame</em>, and its affairs are governed by <strong>Jupiter</strong>
+         , which sits in Virgo 16°34' in your 11th house.</p>
+      <div class="occupants">
+        <div class="occ"><span class="g">♇</span>
+          <div><strong>Pluto</strong>
+          in Capricorn 17°18'
+          <p class="muted">Your <strong>power, death, and the thing that rebuilds you</strong> operates in a <em>structural, patient, built for the long climb</em> way, and it does its work in the arena of speech, writing, siblings, the near environment, how you take in and pass on information.</p></div></div></div>
+    </article>
+    <article class="card house-card" id="house-4" data-house="4">
+      <header>
+        <span class="hnum">4</span>
+        <div>
+          <h3>Fourth House</h3>
+          <p class="tag">Root & Home</p>
+        </div>
+        <span class="cusp">Capricorn 22°18'</span>
+      </header>
+      <p class="q">Where do I come from, and where do I rest?</p>
+      <p class="domain">home, lineage, the mother-ground, the private interior nobody sees, where you come from.</p>
+      <p class="onthecusp"><strong>Capricorn</strong> on the cusp means this area of life runs
+         <em>structural, patient, built for the long climb</em>, and its affairs are governed by <strong>Saturn</strong>
+         , which sits in Sagittarius 16°24' in your 2nd house.</p>
+      <p class="empty">No planets here. An empty house is not an empty life: the affairs of this house
+             are handled through <strong>Saturn</strong> wherever it sits, and they tend to run quietly
+             rather than loudly.</p>
+    </article>
+    <article class="card house-card" id="house-5" data-house="5">
+      <header>
+        <span class="hnum">5</span>
+        <div>
+          <h3>Fifth House</h3>
+          <p class="tag">Play & Creation</p>
+        </div>
+        <span class="cusp">Aquarius 24°50'</span>
+      </header>
+      <p class="q">What do I make for the joy of it?</p>
+      <p class="domain">creativity, children, romance, performance, pleasure for its own sake.</p>
+      <p class="onthecusp"><strong>Aquarius</strong> on the cusp means this area of life runs
+         <em>detached, original, loyal to the principle</em>, and its affairs are governed by <strong>Uranus</strong>
+         , which sits in Aries 19°24' in your 6th house.</p>
+      <div class="occupants">
+        <div class="occ"><span class="g">♀</span>
+          <div><strong>Venus</strong>
+          in Pisces 12°01'
+          <p class="muted">Your <strong>love, value, beauty, and what you move toward</strong> operates in a <em>permeable, compassionate, boundaried only by choice</em> way, and it does its work in the arena of creativity, children, romance, performance, pleasure for its own sake.</p></div></div>
+        <div class="occ"><span class="g">♆</span>
+          <div><strong>Neptune</strong>
+          in Pisces 10°20'
+          <p class="muted">Your <strong>dissolution, vision, and where the veil is thin</strong> operates in a <em>permeable, compassionate, boundaried only by choice</em> way, and it does its work in the arena of creativity, children, romance, performance, pleasure for its own sake.</p></div></div>
+        <div class="occ"><span class="g">⚷</span>
+          <div><strong>Chiron</strong>
+          in Pisces 21°31'
+          <p class="muted">Your <strong>the wound that becomes the medicine</strong> operates in a <em>permeable, compassionate, boundaried only by choice</em> way, and it does its work in the arena of creativity, children, romance, performance, pleasure for its own sake.</p></div></div>
+        <div class="occ"><span class="g">☋</span>
+          <div><strong>South Node</strong>
+          in Pisces 21°50' ℞
+          <p class="muted">Your <strong>the comfortable past, mastered and worth releasing</strong> operates in a <em>permeable, compassionate, boundaried only by choice</em> way, and it does its work in the arena of creativity, children, romance, performance, pleasure for its own sake.</p></div></div></div>
+    </article>
+    <article class="card house-card" id="house-6" data-house="6">
+      <header>
+        <span class="hnum">6</span>
+        <div>
+          <h3>Sixth House</h3>
+          <p class="tag">Craft & Maintenance</p>
+        </div>
+        <span class="cusp">Pisces 24°36'</span>
+      </header>
+      <p class="q">What do I do every day?</p>
+      <p class="domain">daily work, routine, health, service, the apprenticeship of skill.</p>
+      <p class="onthecusp"><strong>Pisces</strong> on the cusp means this area of life runs
+         <em>permeable, compassionate, boundaried only by choice</em>, and its affairs are governed by <strong>Neptune</strong>
+         , which sits in Pisces 10°20' in your 5th house.</p>
+      <div class="occupants">
+        <div class="occ"><span class="g">☉</span>
+          <div><strong>Sun</strong>
+          in Aries 1°57'
+          <p class="muted">Your <strong>core identity and the thing you are burning toward</strong> operates in a <em>initiating, direct, impatient with preamble</em> way, and it does its work in the arena of daily work, routine, health, service, the apprenticeship of skill.</p></div></div>
+        <div class="occ"><span class="g">☿</span>
+          <div><strong>Mercury</strong>
+          in Aries 0°16'
+          <p class="muted">Your <strong>mind, speech, and the way you process</strong> operates in a <em>initiating, direct, impatient with preamble</em> way, and it does its work in the arena of daily work, routine, health, service, the apprenticeship of skill.</p></div></div>
+        <div class="occ"><span class="g">♅</span>
+          <div><strong>Uranus</strong>
+          in Aries 19°24'
+          <p class="muted">Your <strong>disruption, liberation, and what will not be tamed</strong> operates in a <em>initiating, direct, impatient with preamble</em> way, and it does its work in the arena of daily work, routine, health, service, the apprenticeship of skill.</p></div></div></div>
+    </article>
+    <article class="card house-card" id="house-7" data-house="7">
+      <header>
+        <span class="hnum">7</span>
+        <div>
+          <h3>Seventh House</h3>
+          <p class="tag">The Other</p>
+        </div>
+        <span class="cusp">Aries 20°14'</span>
+      </header>
+      <p class="q">Who do I become in front of you?</p>
+      <p class="domain">partnership, marriage, open enemies, the mirror, whatever you meet by meeting someone else.</p>
+      <p class="onthecusp"><strong>Aries</strong> on the cusp means this area of life runs
+         <em>initiating, direct, impatient with preamble</em>, and its affairs are governed by <strong>Mars</strong>
+         , which sits in Sagittarius 5°08' in your 2nd house.</p>
+      <p class="empty">No planets here. An empty house is not an empty life: the affairs of this house
+             are handled through <strong>Mars</strong> wherever it sits, and they tend to run quietly
+             rather than loudly.</p>
+    </article>
+    <article class="card house-card" id="house-8" data-house="8">
+      <header>
+        <span class="hnum">8</span>
+        <div>
+          <h3>Eighth House</h3>
+          <p class="tag">Death & Merging</p>
+        </div>
+        <span class="cusp">Taurus 18°26'</span>
+      </header>
+      <p class="q">What am I willing to lose?</p>
+      <p class="domain">sex, death, shared money, the occult, transformation, what you cannot do alone.</p>
+      <p class="onthecusp"><strong>Taurus</strong> on the cusp means this area of life runs
+         <em>steady, sensory, slow to move and hard to shift</em>, and its affairs are governed by <strong>Venus</strong>
+         , which sits in Pisces 12°01' in your 5th house.</p>
+      <p class="empty">No planets here. An empty house is not an empty life: the affairs of this house
+             are handled through <strong>Venus</strong> wherever it sits, and they tend to run quietly
+             rather than loudly.</p>
+    </article>
+    <article class="card house-card" id="house-9" data-house="9">
+      <header>
+        <span class="hnum">9</span>
+        <div>
+          <h3>Ninth House</h3>
+          <p class="tag">Meaning & Distance</p>
+        </div>
+        <span class="cusp">Gemini 19°26'</span>
+      </header>
+      <p class="q">What is it all for?</p>
+      <p class="domain">philosophy, long journeys, teaching, the search for a frame big enough to hold it.</p>
+      <p class="onthecusp"><strong>Gemini</strong> on the cusp means this area of life runs
+         <em>curious, plural, quick across surfaces</em>, and its affairs are governed by <strong>Mercury</strong>
+         , which sits in Aries 0°16' in your 6th house.</p>
+      <p class="empty">No planets here. An empty house is not an empty life: the affairs of this house
+             are handled through <strong>Mercury</strong> wherever it sits, and they tend to run quietly
+             rather than loudly.</p>
+    </article>
+    <article class="card house-card" id="house-10" data-house="10">
+      <header>
+        <span class="hnum">10</span>
+        <div>
+          <h3>Tenth House</h3>
+          <p class="tag">Vocation & Visibility</p>
+        </div>
+        <span class="cusp">Cancer 22°18'</span>
+      </header>
+      <p class="q">What am I here to be seen doing?</p>
+      <p class="domain">calling, public role, authority, reputation, what you are seen to be for.</p>
+      <p class="onthecusp"><strong>Cancer</strong> on the cusp means this area of life runs
+         <em>protective, tidal, oriented to belonging</em>, and its affairs are governed by <strong>Moon</strong>
+         , which sits in Virgo 17°05' in your 11th house.</p>
+      <p class="empty">No planets here. An empty house is not an empty life: the affairs of this house
+             are handled through <strong>Moon</strong> wherever it sits, and they tend to run quietly
+             rather than loudly.</p>
+    </article>
+    <article class="card house-card" id="house-11" data-house="11">
+      <header>
+        <span class="hnum">11</span>
+        <div>
+          <h3>Eleventh House</h3>
+          <p class="tag">Collective & Future</p>
+        </div>
+        <span class="cusp">Leo 24°50'</span>
+      </header>
+      <p class="q">Who is walking with me?</p>
+      <p class="domain">community, allies, groups, the future you are building toward with others.</p>
+      <p class="onthecusp"><strong>Leo</strong> on the cusp means this area of life runs
+         <em>warm, generous, needing to be witnessed</em>, and its affairs are governed by <strong>Sun</strong>
+         , which sits in Aries 1°57' in your 6th house.</p>
+      <div class="occupants">
+        <div class="occ"><span class="g">☽</span>
+          <div><strong>Moon</strong>
+          in Virgo 17°05'
+          <p class="muted">Your <strong>instinct, need, and how you self-soothe</strong> operates in a <em>discerning, practical, devoted to getting it right</em> way, and it does its work in the arena of community, allies, groups, the future you are building toward with others.</p></div></div>
+        <div class="occ"><span class="g">♃</span>
+          <div><strong>Jupiter</strong>
+          in Virgo 16°34' ℞
+          <p class="muted">Your <strong>faith, expansion, and where you are generous</strong> operates in a <em>discerning, practical, devoted to getting it right</em> way, and it does its work in the arena of community, allies, groups, the future you are building toward with others.</p></div></div>
+        <div class="occ"><span class="g">☊</span>
+          <div><strong>North Node</strong>
+          in Virgo 21°50' ℞
+          <p class="muted">Your <strong>the direction of growth, unfamiliar on purpose</strong> operates in a <em>discerning, practical, devoted to getting it right</em> way, and it does its work in the arena of community, allies, groups, the future you are building toward with others.</p></div></div></div>
+    </article>
+    <article class="card house-card" id="house-12" data-house="12">
+      <header>
+        <span class="hnum">12</span>
+        <div>
+          <h3>Twelfth House</h3>
+          <p class="tag">Dissolution & Source</p>
+        </div>
+        <span class="cusp">Virgo 24°36'</span>
+      </header>
+      <p class="q">What is moving through me that is not mine?</p>
+      <p class="domain">solitude, the unconscious, prayer, surrender, what dissolves the separate self.</p>
+      <p class="onthecusp"><strong>Virgo</strong> on the cusp means this area of life runs
+         <em>discerning, practical, devoted to getting it right</em>, and its affairs are governed by <strong>Mercury</strong>
+         , which sits in Aries 0°16' in your 6th house.</p>
+      <p class="empty">No planets here. An empty house is not an empty life: the affairs of this house
+             are handled through <strong>Mercury</strong> wherever it sits, and they tend to run quietly
+             rather than loudly.</p>
+    </article></div>
+</section>
+
+<section id="aspects">
+  <h2>Aspects</h2>
+  <p class="lead">49 aspects, sorted tightest first. Orb is how far from exact: a 0.2° square is a
+     defining feature of a life, a 7° square is background weather. Click a row to light it up on the wheel.</p>
+  <table>
+    <thead><tr><th>Body</th><th></th><th>Body</th><th>Aspect</th><th>Orb</th><th>What it asks of you</th></tr></thead>
+    <tbody>
+    <tr class="row-asp" data-a="Jupiter" data-b="Saturn" data-major="true">
+      <td>Jupiter</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>Saturn</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.977"></span>0.16°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Moon" data-b="Pluto" data-major="true">
+      <td>Moon</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">△</td>
+      <td>Pluto</td>
+      <td><strong>Trine</strong> <span class="muted">flow</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.969"></span>0.22°</td>
+      <td class="muted work">easy and therefore easy to waste; this is talent you did not have to earn</td>
+    </tr>
+    <tr class="row-asp" data-a="Chiron" data-b="NorthNode" data-major="true">
+      <td>Chiron</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>N Node</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.96"></span>0.32°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Chiron" data-b="SouthNode" data-major="true">
+      <td>Chiron</td>
+      <td class="g asp-g" style="color:var(--asp-conj)">☌</td>
+      <td>S Node</td>
+      <td><strong>Conjunction</strong> <span class="muted">fusion</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.96"></span>0.32°</td>
+      <td class="muted work">these two cannot be separated; they act as one voice and you rarely hear them apart</td>
+    </tr>
+    <tr class="row-asp" data-a="NorthNode" data-b="MC" data-major="true">
+      <td>N Node</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">⚹</td>
+      <td>MC</td>
+      <td><strong>Sextile</strong> <span class="muted">offer</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.909"></span>0.46°</td>
+      <td class="muted work">an open door that only opens if you walk through it</td>
+    </tr>
+    <tr class="row-asp" data-a="SouthNode" data-b="MC" data-major="true">
+      <td>S Node</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">△</td>
+      <td>MC</td>
+      <td><strong>Trine</strong> <span class="muted">flow</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.935"></span>0.46°</td>
+      <td class="muted work">easy and therefore easy to waste; this is talent you did not have to earn</td>
+    </tr>
+    <tr class="row-asp" data-a="Moon" data-b="Jupiter" data-major="true">
+      <td>Moon</td>
+      <td class="g asp-g" style="color:var(--asp-conj)">☌</td>
+      <td>Jupiter</td>
+      <td><strong>Conjunction</strong> <span class="muted">fusion</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.935"></span>0.52°</td>
+      <td class="muted work">these two cannot be separated; they act as one voice and you rarely hear them apart</td>
+    </tr>
+    <tr class="row-asp" data-a="Moon" data-b="Saturn" data-major="true">
+      <td>Moon</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>Saturn</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.902"></span>0.69°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Jupiter" data-b="Pluto" data-major="true">
+      <td>Jupiter</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">△</td>
+      <td>Pluto</td>
+      <td><strong>Trine</strong> <span class="muted">flow</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.894"></span>0.74°</td>
+      <td class="muted work">easy and therefore easy to waste; this is talent you did not have to earn</td>
+    </tr>
+    <tr class="row-asp" data-a="Chiron" data-b="MC" data-major="true">
+      <td>Chiron</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">△</td>
+      <td>MC</td>
+      <td><strong>Trine</strong> <span class="muted">flow</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.889"></span>0.77°</td>
+      <td class="muted work">easy and therefore easy to waste; this is talent you did not have to earn</td>
+    </tr>
+    <tr class="row-asp" data-a="Uranus" data-b="ASC" data-major="true">
+      <td>Uranus</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>ASC</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.894"></span>0.85°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Saturn" data-b="Pluto" data-major="false">
+      <td>Saturn</td>
+      <td class="g asp-g" style="color:var(--asp-minor)">⚺</td>
+      <td>Pluto</td>
+      <td><strong>Semisextile</strong> <span class="muted">nudge</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.549"></span>0.9°</td>
+      <td class="muted work">low-grade and persistent, like a neighbour you did not choose</td>
+    </tr>
+    <tr class="row-asp" data-a="Chiron" data-b="ASC" data-major="false">
+      <td>Chiron</td>
+      <td class="g asp-g" style="color:var(--asp-minor)">⊻</td>
+      <td>ASC</td>
+      <td><strong>Quincunx</strong> <span class="muted">misfit</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.574"></span>1.28°</td>
+      <td class="muted work">two functions that do not speak the same language; adjustment, never resolution</td>
+    </tr>
+    <tr class="row-asp" data-a="NorthNode" data-b="ASC" data-major="false">
+      <td>N Node</td>
+      <td class="g asp-g" style="color:var(--asp-minor)">⚺</td>
+      <td>ASC</td>
+      <td><strong>Semisextile</strong> <span class="muted">nudge</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.202"></span>1.6°</td>
+      <td class="muted work">low-grade and persistent, like a neighbour you did not choose</td>
+    </tr>
+    <tr class="row-asp" data-a="SouthNode" data-b="ASC" data-major="false">
+      <td>S Node</td>
+      <td class="g asp-g" style="color:var(--asp-minor)">⊻</td>
+      <td>ASC</td>
+      <td><strong>Quincunx</strong> <span class="muted">misfit</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.468"></span>1.6°</td>
+      <td class="muted work">two functions that do not speak the same language; adjustment, never resolution</td>
+    </tr>
+    <tr class="row-asp" data-a="Sun" data-b="Mercury" data-major="true">
+      <td>Sun</td>
+      <td class="g asp-g" style="color:var(--asp-conj)">☌</td>
+      <td>Mercury</td>
+      <td><strong>Conjunction</strong> <span class="muted">fusion</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.789"></span>1.68°</td>
+      <td class="muted work">these two cannot be separated; they act as one voice and you rarely hear them apart</td>
+    </tr>
+    <tr class="row-asp" data-a="Venus" data-b="Neptune" data-major="true">
+      <td>Venus</td>
+      <td class="g asp-g" style="color:var(--asp-conj)">☌</td>
+      <td>Neptune</td>
+      <td><strong>Conjunction</strong> <span class="muted">fusion</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.79"></span>1.68°</td>
+      <td class="muted work">these two cannot be separated; they act as one voice and you rarely hear them apart</td>
+    </tr>
+    <tr class="row-asp" data-a="ASC" data-b="MC" data-major="true">
+      <td>ASC</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>MC</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.707"></span>2.05°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Uranus" data-b="Pluto" data-major="true">
+      <td>Uranus</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>Pluto</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.701"></span>2.09°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Moon" data-b="Uranus" data-major="false">
+      <td>Moon</td>
+      <td class="g asp-g" style="color:var(--asp-minor)">⊻</td>
+      <td>Uranus</td>
+      <td><strong>Quincunx</strong> <span class="muted">misfit</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.23"></span>2.31°</td>
+      <td class="muted work">two functions that do not speak the same language; adjustment, never resolution</td>
+    </tr>
+    <tr class="row-asp" data-a="Uranus" data-b="NorthNode" data-major="false">
+      <td>Uranus</td>
+      <td class="g asp-g" style="color:var(--asp-minor)">⊻</td>
+      <td>N Node</td>
+      <td><strong>Quincunx</strong> <span class="muted">misfit</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.185"></span>2.44°</td>
+      <td class="muted work">two functions that do not speak the same language; adjustment, never resolution</td>
+    </tr>
+    <tr class="row-asp" data-a="Jupiter" data-b="Uranus" data-major="false">
+      <td>Jupiter</td>
+      <td class="g asp-g" style="color:var(--asp-minor)">⊻</td>
+      <td>Uranus</td>
+      <td><strong>Quincunx</strong> <span class="muted">misfit</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.056"></span>2.83°</td>
+      <td class="muted work">two functions that do not speak the same language; adjustment, never resolution</td>
+    </tr>
+    <tr class="row-asp" data-a="Uranus" data-b="MC" data-major="true">
+      <td>Uranus</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>MC</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.586"></span>2.9°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Pluto" data-b="ASC" data-major="true">
+      <td>Pluto</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>ASC</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.58"></span>2.94°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Saturn" data-b="Uranus" data-major="true">
+      <td>Saturn</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">△</td>
+      <td>Uranus</td>
+      <td><strong>Trine</strong> <span class="muted">flow</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.572"></span>3°</td>
+      <td class="muted work">easy and therefore easy to waste; this is talent you did not have to earn</td>
+    </tr>
+    <tr class="row-asp" data-a="Sun" data-b="Mars" data-major="true">
+      <td>Sun</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">△</td>
+      <td>Mars</td>
+      <td><strong>Trine</strong> <span class="muted">flow</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.544"></span>3.19°</td>
+      <td class="muted work">easy and therefore easy to waste; this is talent you did not have to earn</td>
+    </tr>
+    <tr class="row-asp" data-a="Saturn" data-b="ASC" data-major="true">
+      <td>Saturn</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">⚹</td>
+      <td>ASC</td>
+      <td><strong>Sextile</strong> <span class="muted">offer</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.231"></span>3.84°</td>
+      <td class="muted work">an open door that only opens if you walk through it</td>
+    </tr>
+    <tr class="row-asp" data-a="Pluto" data-b="Chiron" data-major="true">
+      <td>Pluto</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">⚹</td>
+      <td>Chiron</td>
+      <td><strong>Sextile</strong> <span class="muted">offer</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.156"></span>4.22°</td>
+      <td class="muted work">an open door that only opens if you walk through it</td>
+    </tr>
+    <tr class="row-asp" data-a="Venus" data-b="Saturn" data-major="true">
+      <td>Venus</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>Saturn</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.374"></span>4.39°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Moon" data-b="Chiron" data-major="true">
+      <td>Moon</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>Chiron</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.445"></span>4.44°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Pluto" data-b="NorthNode" data-major="true">
+      <td>Pluto</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">△</td>
+      <td>N Node</td>
+      <td><strong>Trine</strong> <span class="muted">flow</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.352"></span>4.54°</td>
+      <td class="muted work">easy and therefore easy to waste; this is talent you did not have to earn</td>
+    </tr>
+    <tr class="row-asp" data-a="Pluto" data-b="SouthNode" data-major="true">
+      <td>Pluto</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">⚹</td>
+      <td>S Node</td>
+      <td><strong>Sextile</strong> <span class="muted">offer</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.092"></span>4.54°</td>
+      <td class="muted work">an open door that only opens if you walk through it</td>
+    </tr>
+    <tr class="row-asp" data-a="Venus" data-b="Jupiter" data-major="true">
+      <td>Venus</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>Jupiter</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.431"></span>4.55°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Moon" data-b="NorthNode" data-major="true">
+      <td>Moon</td>
+      <td class="g asp-g" style="color:var(--asp-conj)">☌</td>
+      <td>N Node</td>
+      <td><strong>Conjunction</strong> <span class="muted">fusion</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.406"></span>4.75°</td>
+      <td class="muted work">these two cannot be separated; they act as one voice and you rarely hear them apart</td>
+    </tr>
+    <tr class="row-asp" data-a="Moon" data-b="SouthNode" data-major="true">
+      <td>Moon</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>S Node</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.406"></span>4.75°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Mercury" data-b="Mars" data-major="true">
+      <td>Mercury</td>
+      <td class="g asp-g" style="color:var(--asp-soft)">△</td>
+      <td>Mars</td>
+      <td><strong>Trine</strong> <span class="muted">flow</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.304"></span>4.87°</td>
+      <td class="muted work">easy and therefore easy to waste; this is talent you did not have to earn</td>
+    </tr>
+    <tr class="row-asp" data-a="Jupiter" data-b="Chiron" data-major="true">
+      <td>Jupiter</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>Chiron</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.38"></span>4.96°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Pluto" data-b="MC" data-major="true">
+      <td>Pluto</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>MC</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.376"></span>4.99°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Moon" data-b="Venus" data-major="true">
+      <td>Moon</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>Venus</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.366"></span>5.07°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Saturn" data-b="Chiron" data-major="true">
+      <td>Saturn</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>Chiron</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.268"></span>5.12°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Mars" data-b="Neptune" data-major="true">
+      <td>Mars</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>Neptune</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.258"></span>5.2°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Jupiter" data-b="NorthNode" data-major="true">
+      <td>Jupiter</td>
+      <td class="g asp-g" style="color:var(--asp-conj)">☌</td>
+      <td>N Node</td>
+      <td><strong>Conjunction</strong> <span class="muted">fusion</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.34"></span>5.28°</td>
+      <td class="muted work">these two cannot be separated; they act as one voice and you rarely hear them apart</td>
+    </tr>
+    <tr class="row-asp" data-a="Jupiter" data-b="SouthNode" data-major="true">
+      <td>Jupiter</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>S Node</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.34"></span>5.28°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Saturn" data-b="NorthNode" data-major="true">
+      <td>Saturn</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>N Node</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.223"></span>5.44°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Saturn" data-b="SouthNode" data-major="true">
+      <td>Saturn</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>S Node</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.223"></span>5.44°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Saturn" data-b="Neptune" data-major="true">
+      <td>Saturn</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>Neptune</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.133"></span>6.07°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr>
+    <tr class="row-asp" data-a="Jupiter" data-b="Neptune" data-major="true">
+      <td>Jupiter</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>Neptune</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.221"></span>6.23°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Moon" data-b="Neptune" data-major="true">
+      <td>Moon</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">☍</td>
+      <td>Neptune</td>
+      <td><strong>Opposition</strong> <span class="muted">tension</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.156"></span>6.75°</td>
+      <td class="muted work">a seesaw between two real needs; the work is holding both, not picking one</td>
+    </tr>
+    <tr class="row-asp" data-a="Venus" data-b="Mars" data-major="true">
+      <td>Venus</td>
+      <td class="g asp-g" style="color:var(--asp-hard)">□</td>
+      <td>Mars</td>
+      <td><strong>Square</strong> <span class="muted">friction</span></td>
+      <td class="orb"><span class="orbbar" style="--s:0.017"></span>6.88°</td>
+      <td class="muted work">the productive grind; this is where effort actually builds something</td>
+    </tr></tbody>
+  </table>
+</section>
+
+<section id="balance">
+  <h2>Balance</h2>
+  <p class="lead">Counting the ten planets plus Chiron. What is loaded, and what is missing. A missing element is
+     usually the thing you chase in other people.</p>
+  <h3 style="margin:26px 0 10px">Elements</h3>
+  
+    <div class="bar-row">
+      <span class="bar-lab">Fire</span>
+      <span class="bar-track"><span class="bar-fill" style="--pct:45.5%"></span></span>
+      <span class="bar-val">5</span>
+      <span class="bar-note muted">spirit, drive, forward motion</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lab">Earth</span>
+      <span class="bar-track"><span class="bar-fill" style="--pct:27.3%"></span></span>
+      <span class="bar-val">3</span>
+      <span class="bar-note muted">body, form, consequence</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lab">Air</span>
+      <span class="bar-track"><span class="bar-fill" style="--pct:0.0%"></span></span>
+      <span class="bar-val">0</span>
+      <span class="bar-note muted">mind, language, relation</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lab">Water</span>
+      <span class="bar-track"><span class="bar-fill" style="--pct:27.3%"></span></span>
+      <span class="bar-val">3</span>
+      <span class="bar-note muted">feeling, memory, depth</span>
+    </div>
+  <h3 style="margin:30px 0 10px">Modalities</h3>
+  
+    <div class="bar-row">
+      <span class="bar-lab">Cardinal</span>
+      <span class="bar-track"><span class="bar-fill" style="--pct:36.4%"></span></span>
+      <span class="bar-val">4</span>
+      <span class="bar-note muted">starts things</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lab">Fixed</span>
+      <span class="bar-track"><span class="bar-fill" style="--pct:0.0%"></span></span>
+      <span class="bar-val">0</span>
+      <span class="bar-note muted">holds things</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-lab">Mutable</span>
+      <span class="bar-track"><span class="bar-fill" style="--pct:63.6%"></span></span>
+      <span class="bar-val">7</span>
+      <span class="bar-note muted">adapts to things</span>
+    </div>
+  <div class="note"><strong>Empty houses:</strong>
+     1st, 4th, 7th, 8th, 9th, 10th, 12th.
+     Emptiness here is not absence. Those areas are run by the ruler of the sign on the cusp, from wherever that
+     planet happens to live.</div>
+</section>
+
+<section id="reading">
+  <h2>The Reading</h2>
+  <div class="prose" id="reading-body">
+    <p><strong>Libra rising with Venus in Pisces in the 5th.</strong>
+       The chart ruler is the one placement worth memorising, because it is the handle on everything else.
+       Yours is Venus, the planet of love, value, beauty, and what you move toward, operating permeable, compassionate, boundaried only by choice, in the house of
+       creativity, children, romance, performance, pleasure for its own sake. That is the spine.</p>
+    <p><strong>Sun in Aries, 6th house.
+       Moon in Virgo, 11th house.</strong>
+       The Sun is what you are becoming; the Moon is what you need in order to keep going. When they are in
+       different elements, as the balance chart above shows, the thing that feeds you is not the same as the thing
+       that drives you, and most of the interesting tension in a life sits in that gap.</p>
+    <p><strong>The tightest aspect in the chart is
+       Jupiter square
+       Saturn, at 0.16° from exact.</strong>
+       The productive grind; this is where effort actually builds something.
+       An orb that tight is not a theme, it is a structural fact.</p>
+    <p class="muted" style="font-size:.86rem">Everything above is composed from your own computed data. No
+       interpretation here was imported from a report, and nothing was rounded or estimated. Where a sentence
+       makes a claim, the number it rests on is on this page.</p>
+  </div>
+</section>
+
+<footer>
+  Computed 2026-10-03 · astronomy-engine 2.1.19 (ACE bundled) + ACE src/astro Placidus · house system: Placidus<br>
+  Validated 57/57 against the independent astro.com import on file. Private: this file is in the gitignored local lane.
+</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('tb');
+  btn.addEventListener('click',function(){
+    var t=root.getAttribute('data-theme');
+    root.setAttribute('data-theme', t==='dark' ? 'light' : t==='light' ? 'auto' : 'dark');
+    btn.textContent = root.getAttribute('data-theme');
+  });
+
+  var svg=document.querySelector('svg.wheel');
+  var lines=[].slice.call(svg.querySelectorAll('.asp-line'));
+  function clear(){ svg.classList.remove('dim'); lines.forEach(function(l){l.classList.remove('on')});
+    [].forEach.call(document.querySelectorAll('tr.row-asp.on'),function(r){r.classList.remove('on')}); }
+  function focusBody(name){
+    if(!name){clear();return}
+    svg.classList.add('dim');
+    lines.forEach(function(l){
+      var hit = l.dataset.a===name || l.dataset.b===name;
+      l.classList.toggle('on', hit);
+    });
+    [].forEach.call(document.querySelectorAll('tr.row-asp'),function(r){
+      r.classList.toggle('on', r.dataset.a===name||r.dataset.b===name);
+    });
+  }
+  var active=null;
+  [].forEach.call(svg.querySelectorAll('.planet'),function(g){
+    function go(){ var n=g.dataset.body; active = (active===n)?null:n; focusBody(active); }
+    g.addEventListener('click',go);
+    g.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();go()} });
+  });
+  [].forEach.call(document.querySelectorAll('tr.row-body'),function(r){
+    r.addEventListener('click',function(){ var n=r.dataset.body; active=(active===n)?null:n; focusBody(active); });
+    r.style.cursor='pointer';
+  });
+  [].forEach.call(document.querySelectorAll('tr.row-asp'),function(r){
+    r.addEventListener('click',function(){
+      svg.classList.add('dim');
+      lines.forEach(function(l){ l.classList.toggle('on', l.dataset.a===r.dataset.a && l.dataset.b===r.dataset.b) });
+      [].forEach.call(document.querySelectorAll('tr.row-asp'),function(x){x.classList.remove('on')});
+      r.classList.add('on'); active=null;
+    });
+  });
+  [].forEach.call(document.querySelectorAll('.pill-h, .house-num'),function(el){
+    el.style.cursor='pointer';
+    el.addEventListener('click',function(e){
+      e.stopPropagation();
+      var h=el.dataset.house, card=document.getElementById('house-'+h);
+      if(!card)return;
+      card.scrollIntoView({block:'center'});
+      card.classList.add('flash'); setTimeout(function(){card.classList.remove('flash')},1400);
+    });
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){active=null;clear()} });
+})();
+</script>
+</body>
+</html>

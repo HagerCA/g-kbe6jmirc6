@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hager Family — Four Charts, One Household</title>
+<style>
+:root{
+  --bg:#faf8f5; --bg-2:#fffdfa; --ink:#1c1a17; --ink-2:#4a453e; --dim:#8a8276;
+  --line:#e2dcd2; --line-2:#cfc7b9; --accent:#8a6d3b; --accent-2:#b89155;
+  --fire:#c0552f; --earth:#6b7a3a; --air:#3f7391; --water:#5a5a96;
+  --asp-hard:#b4472e; --asp-soft:#3f7391; --asp-conj:#8a6d3b;
+  --p1:#8a6d3b; --p2:#a0476a; --p3:#3f7391; --p4:#6b7a3a;
+  --shadow:0 1px 2px rgba(28,26,23,.06),0 8px 24px rgba(28,26,23,.06);
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --serif:ui-serif,Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root[data-theme="auto"]{
+  --bg:#141311; --bg-2:#1c1a17; --ink:#f0ece5; --ink-2:#c4bcae; --dim:#8a8276;
+  --line:#2e2a25; --line-2:#413b33; --accent:#c9a66b; --accent-2:#e0bf85;
+  --fire:#e07a52; --earth:#9db25c; --air:#6aa8c9; --water:#8d8dd0;
+  --asp-hard:#e07a52; --asp-soft:#6aa8c9; --asp-conj:#c9a66b;
+  --p1:#c9a66b; --p2:#d98ca8; --p3:#6aa8c9; --p4:#9db25c;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
+}}
+:root[data-theme="dark"]{
+  --bg:#141311; --bg-2:#1c1a17; --ink:#f0ece5; --ink-2:#c4bcae; --dim:#8a8276;
+  --line:#2e2a25; --line-2:#413b33; --accent:#c9a66b; --accent-2:#e0bf85;
+  --fire:#e07a52; --earth:#9db25c; --air:#6aa8c9; --water:#8d8dd0;
+  --asp-hard:#e07a52; --asp-soft:#6aa8c9; --asp-conj:#c9a66b;
+  --p1:#c9a66b; --p2:#d98ca8; --p3:#6aa8c9; --p4:#9db25c;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px 120px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);margin:0 0 .2em}
+h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 .5em}
+h3{font-size:1.15rem;margin:0}
+.muted{color:var(--dim)} .tiny{font-size:.74rem}
+em{font-style:italic;color:var(--ink-2)}
+
+header.top{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+.lead{font-family:var(--serif);font-size:1.18rem;color:var(--ink-2);max-width:68ch}
+
+nav.toc{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-bottom:56px}
+nav.toc ul{display:flex;gap:4px;list-style:none;margin:0;padding:10px 0;overflow-x:auto}
+nav.toc a{font-family:var(--mono);font-size:.74rem;color:var(--ink-2);text-decoration:none;padding:7px 13px;border-radius:999px;white-space:nowrap}
+nav.toc a:hover{background:var(--bg-2);color:var(--ink)}
+.themebtn{margin-left:auto;flex:none;background:none;border:1px solid var(--line);color:var(--ink-2);
+  border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:.72rem;cursor:pointer}
+.themebtn:hover{border-color:var(--accent);color:var(--accent)}
+
+section{margin:0 0 88px;scroll-margin-top:70px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.person{border-top:3px solid var(--pc)}
+.person h3{color:var(--pc)}
+.person .birth{font-family:var(--mono);font-size:.74rem;color:var(--dim);margin:.3em 0 14px}
+.person dl{margin:0;display:flex;flex-direction:column;gap:6px}
+.person dl div{display:flex;justify-content:space-between;gap:10px;font-size:.86rem;border-bottom:1px dotted var(--line);padding-bottom:5px}
+.person dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.person dd{margin:0;text-align:right}
+.bal{font-family:var(--mono);font-size:.72rem;margin:14px 0 0}
+
+.wheelgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px;align-items:start}
+@media(max-width:900px){.wheelgrid{grid-template-columns:1fr}}
+.wheelbox{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:var(--shadow)}
+svg.wheel{width:100%;height:auto;display:block}
+.ring{fill:none;stroke:var(--line-2);stroke-width:1}
+.ring-faint{stroke:var(--line);stroke-dasharray:2 4}
+.spoke-sign{stroke:var(--line-2);stroke-width:1}
+.glyph-sign{font-size:21px;text-anchor:middle;dominant-baseline:central}
+.glyph-sign[data-el="Fire"]{fill:var(--fire)} .glyph-sign[data-el="Earth"]{fill:var(--earth)}
+.glyph-sign[data-el="Air"]{fill:var(--air)}   .glyph-sign[data-el="Water"]{fill:var(--water)}
+.glyph-pt{font-size:17px;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.pt-hit{fill:transparent;cursor:pointer}
+.pt:hover .pt-hit{fill:color-mix(in srgb,var(--accent) 20%,transparent)}
+.pt:focus{outline:none}
+.pt:focus .pt-hit{fill:color-mix(in srgb,var(--accent) 20%,transparent)}
+.band-lab{font-family:var(--mono);font-size:11px;text-anchor:middle;dominant-baseline:central;letter-spacing:.1em}
+.asc-dot{opacity:.9}
+svg.wheel.dim .pt{opacity:.14}
+svg.wheel.dim .pt.on{opacity:1}
+#ptread{min-height:2.6em;font-family:var(--mono);font-size:.78rem;color:var(--accent);margin:14px 0 0}
+
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:500}
+td.g{font-size:1.1rem;width:1.6em}
+.who{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em}
+.orb{font-family:var(--mono);white-space:nowrap}
+.orbbar{display:inline-block;width:30px;height:4px;border-radius:2px;margin-right:7px;vertical-align:middle;
+  background:linear-gradient(90deg,var(--accent) calc(var(--s)*100%),var(--line) 0)}
+td.work{max-width:26ch;font-size:.78rem;line-height:1.45}
+tbody tr:hover{background:var(--bg-2)}
+
+.pair{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:26px;margin:0 0 22px;box-shadow:var(--shadow)}
+.pair-head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between;
+  padding-bottom:16px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.pair-stats{display:flex;gap:18px;font-family:var(--mono);font-size:.74rem;color:var(--ink-2)}
+.pair-stats strong{color:var(--accent);font-size:.95rem}
+.pair-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start}
+@media(max-width:980px){.pair-body{grid-template-columns:1fr}}
+.prose{max-width:62ch}
+.prose p{margin:0 0 1.05em;font-size:.93rem}
+.prose p.softer{font-size:.84rem;color:var(--dim);border-left:2px solid var(--line-2);padding-left:14px}
+.prose strong{color:var(--ink)}
+
+.bar-row{display:grid;grid-template-columns:5.5em 1fr 2.4em minmax(0,15em);gap:12px;align-items:center;padding:7px 0;font-size:.86rem}
+@media(max-width:700px){.bar-row{grid-template-columns:5em 1fr 2.4em}.bar-note{display:none}}
+.bar-lab{font-family:var(--mono);font-size:.74rem;color:var(--ink-2)}
+.bar-track{height:7px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar-fill{display:block;height:100%;width:var(--pct);background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:4px}
+.bar-val{font-family:var(--mono);font-size:.78rem;color:var(--ink-2)}
+.bar-note{font-size:.76rem}
+
+.note{background:var(--bg-2);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;padding:18px 22px;margin:26px 0;font-size:.92rem}
+.note strong{color:var(--accent)}
+.bigtable{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:8px 18px;box-shadow:var(--shadow)}
+footer{border-top:1px solid var(--line);padding:30px 0;font-family:var(--mono);font-size:.72rem;color:var(--dim)}
+</style>
+</head>
+<body>
+<nav class="toc"><div class="wrap"><ul>
+  <li><a href="#four">The Four</a></li>
+  <li><a href="#pattern">The Pattern</a></li>
+  <li><a href="#overlay">All Four Overlaid</a></li>
+  <li><a href="#pairs">The Six Pairs</a></li>
+  <li><a href="#balance">Family Balance</a></li>
+  <li><a href="#composite">The Composite</a></li>
+  <li><a href="#howto">How to Read This</a></li>
+  <li><button class="themebtn" id="tb">theme</button></li>
+</ul></div></nav>
+
+<div class="wrap">
+<header class="top">
+  <p class="eyebrow">Four Natal Charts · Six Relationships · One Household</p>
+  <h1>The Hager Family</h1>
+  <p class="lead">Christopher, Pixie, Hudson and Hendrix. Every chart computed locally from exact birth data with
+     Placidus houses, then every pair compared. 285 cross-contacts in total. This page is about what happens
+     <em>between</em> the charts, which is the part no individual report can show you.</p>
+</header>
+
+<section id="four">
+  <h2>The Four</h2>
+  <div class="cards">
+  <article class="card person" style="--pc:var(--p1)">
+    <h3>Christopher</h3>
+    <p class="birth">March 31, 1978 at 1:28 AM</p>
+    <dl>
+      <div><dt>Sun</dt><dd>Aries</dd></div>
+      <div><dt>Moon</dt><dd>Capricorn</dd></div>
+      <div><dt>Rising</dt><dd>Capricorn 14°32'</dd></div>
+      <div><dt>Midheaven</dt><dd>Scorpio 4°25'</dd></div>
+      <div><dt>Chart ruler</dt><dd>Saturn in Leo, 8th</dd></div>
+    </dl>
+    <p class="bal muted">Fire 5 · Earth 2
+       · Air 2 · Water 2</p>
+  </article>
+  <article class="card person" style="--pc:var(--p2)">
+    <h3>Pixie</h3>
+    <p class="birth">July 15, 1983 at 12:30 PM</p>
+    <dl>
+      <div><dt>Sun</dt><dd>Cancer</dd></div>
+      <div><dt>Moon</dt><dd>Libra</dd></div>
+      <div><dt>Rising</dt><dd>Libra 14°36'</dd></div>
+      <div><dt>Midheaven</dt><dd>Cancer 15°59'</dd></div>
+      <div><dt>Chart ruler</dt><dd>Venus in Virgo, 11th</dd></div>
+    </dl>
+    <p class="bal muted">Fire 3 · Earth 1
+       · Air 4 · Water 3</p>
+  </article>
+  <article class="card person" style="--pc:var(--p3)">
+    <h3>Hudson</h3>
+    <p class="birth">February 21, 2015 at 8:47 PM</p>
+    <dl>
+      <div><dt>Sun</dt><dd>Pisces</dd></div>
+      <div><dt>Moon</dt><dd>Aries</dd></div>
+      <div><dt>Rising</dt><dd>Libra 12°52'</dd></div>
+      <div><dt>Midheaven</dt><dd>Cancer 14°05'</dd></div>
+      <div><dt>Chart ruler</dt><dd>Venus in Aries, 6th</dd></div>
+    </dl>
+    <p class="bal muted">Fire 6 · Earth 1
+       · Air 1 · Water 3</p>
+  </article>
+  <article class="card person" style="--pc:var(--p4)">
+    <h3>Hendrix</h3>
+    <p class="birth">March 21, 2016 at 8:29 PM</p>
+    <dl>
+      <div><dt>Sun</dt><dd>Aries</dd></div>
+      <div><dt>Moon</dt><dd>Virgo</dd></div>
+      <div><dt>Rising</dt><dd>Libra 20°14'</dd></div>
+      <div><dt>Midheaven</dt><dd>Cancer 22°18'</dd></div>
+      <div><dt>Chart ruler</dt><dd>Venus in Pisces, 5th</dd></div>
+    </dl>
+    <p class="bal muted">Fire 5 · Earth 3
+       · Air 0 · Water 3</p>
+  </article></div>
+</section>
+
+<section id="pattern">
+  <h2>The Pattern</h2>
+  <p class="lead">Before any single aspect, there is a structural fact about this household that is hard to miss
+     once you see it.</p>
+  <div class="bigtable">
+    <table>
+      <thead><tr><th>Person</th><th>Ascendant</th><th>Midheaven</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td><strong style="color:var(--p2)">Pixie</strong></td><td>Libra 14°36'</td><td>Cancer 15°59'</td>
+            <td class="muted">meets the world through relationship, publicly oriented to home</td></tr>
+        <tr><td><strong style="color:var(--p3)">Hudson</strong></td><td>Libra 12°52'</td><td>Cancer 14°05'</td>
+            <td class="muted">same interface, same public orientation</td></tr>
+        <tr><td><strong style="color:var(--p4)">Hendrix</strong></td><td>Libra 20°14'</td><td>Cancer 22°18'</td>
+            <td class="muted">same again, eight degrees along</td></tr>
+        <tr><td><strong style="color:var(--p1)">Christopher</strong></td><td>Capricorn 14°32'</td><td>Scorpio 4°25'</td>
+            <td class="muted">structure and the long climb, publicly oriented to depth</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <strong>Three of the four share both a Libra Ascendant and a Cancer Midheaven, within eight degrees of each
+    other.</strong> Chris is the outlier in his own house. Pixie and both boys arrive through relationship and
+    orient publicly toward home and belonging. Chris arrives through structure and orients publicly toward depth
+    and transformation. Three people in that household are running the same operating system, and one is running
+    a different one. Not better, not worse. Different, and worth knowing when the room gets loud.
+  </div>
+  <div class="note">
+    <strong>A note on how this got confirmed.</strong> Hendrix's birth time was recorded in this system as 9:29 PM
+    for three weeks, which produced a Scorpio Ascendant and broke the pattern. On 2026-10-03 the time was restated
+    independently as 8:29 PM, which lands inside the Libra window and matches his chart app exactly. The pattern
+    above was in genuine doubt until that was settled. The birth certificate would close it beyond argument.
+  </div>
+</section>
+
+<section id="overlay">
+  <h2>All Four Overlaid</h2>
+  <p class="lead">One zodiac, four concentric bands, 0° Aries on the left. Click any planet to isolate that
+     person. This is the view that shows you where the family clusters and where it leaves gaps.</p>
+  <div class="wheelgrid">
+    <div class="wheelbox"><svg viewBox="0 0 700 700" class="wheel" role="img" aria-label="All four charts overlaid on one zodiac"><circle cx="350" cy="350" r="338" class="ring"/><circle cx="350" cy="350" r="306" class="ring"/><line x1="44.0" y1="350.0" x2="12.0" y2="350.0" class="spoke-sign"/><text x="39.0" y="433.3" class="glyph-sign" data-el="Fire">♈</text><line x1="85.0" y1="503.0" x2="57.3" y2="519.0" class="spoke-sign"/><text x="122.3" y="577.7" class="glyph-sign" data-el="Earth">♉</text><line x1="197.0" y1="615.0" x2="181.0" y2="642.7" class="spoke-sign"/><text x="266.7" y="661.0" class="glyph-sign" data-el="Air">♊</text><line x1="350.0" y1="656.0" x2="350.0" y2="688.0" class="spoke-sign"/><text x="433.3" y="661.0" class="glyph-sign" data-el="Water">♋</text><line x1="503.0" y1="615.0" x2="519.0" y2="642.7" class="spoke-sign"/><text x="577.7" y="577.7" class="glyph-sign" data-el="Fire">♌</text><line x1="615.0" y1="503.0" x2="642.7" y2="519.0" class="spoke-sign"/><text x="661.0" y="433.3" class="glyph-sign" data-el="Earth">♍</text><line x1="656.0" y1="350.0" x2="688.0" y2="350.0" class="spoke-sign"/><text x="661.0" y="266.7" class="glyph-sign" data-el="Air">♎</text><line x1="615.0" y1="197.0" x2="642.7" y2="181.0" class="spoke-sign"/><text x="577.7" y="122.3" class="glyph-sign" data-el="Water">♏</text><line x1="503.0" y1="85.0" x2="519.0" y2="57.3" class="spoke-sign"/><text x="433.3" y="39.0" class="glyph-sign" data-el="Fire">♐</text><line x1="350.0" y1="44.0" x2="350.0" y2="12.0" class="spoke-sign"/><text x="266.7" y="39.0" class="glyph-sign" data-el="Earth">♑</text><line x1="197.0" y1="85.0" x2="181.0" y2="57.3" class="spoke-sign"/><text x="122.3" y="122.3" class="glyph-sign" data-el="Air">♒</text><line x1="85.0" y1="197.0" x2="57.3" y2="181.0" class="spoke-sign"/><text x="39.0" y="266.7" class="glyph-sign" data-el="Water">♓</text><circle cx="350" cy="350" r="292" class="ring ring-faint"/><text x="621.3" y="369.0" class="band-lab" fill="var(--p1)">Chris</text><g class="pt" data-person="christopher" data-body="Sun" tabindex="0"><circle cx="82.4" cy="398.7" r="11" class="pt-hit"/><text x="82.4" y="398.7" class="glyph-pt" fill="var(--p1)">☉</text></g><g class="pt" data-person="christopher" data-body="Moon" tabindex="0"><circle cx="316.1" cy="80.1" r="11" class="pt-hit"/><text x="316.1" y="80.1" class="glyph-pt" fill="var(--p1)">☽</text></g><g class="pt" data-person="christopher" data-body="Mercury" tabindex="0"><circle cx="105.6" cy="469.4" r="11" class="pt-hit"/><text x="105.6" y="469.4" class="glyph-pt" fill="var(--p1)">☿</text></g><g class="pt" data-person="christopher" data-body="Venus" tabindex="0"><circle cx="107.5" cy="473.2" r="11" class="pt-hit"/><text x="107.5" y="473.2" class="glyph-pt" fill="var(--p1)">♀</text></g><g class="pt" data-person="christopher" data-body="Mars" tabindex="0"><circle cx="472.3" cy="592.9" r="11" class="pt-hit"/><text x="472.3" y="592.9" class="glyph-pt" fill="var(--p1)">♂</text></g><g class="pt" data-person="christopher" data-body="Jupiter" tabindex="0"><circle cx="342.8" cy="621.9" r="11" class="pt-hit"/><text x="342.8" y="621.9" class="glyph-pt" fill="var(--p1)">♃</text></g><g class="pt" data-person="christopher" data-body="Saturn" tabindex="0"><circle cx="570.6" cy="509.1" r="11" class="pt-hit"/><text x="570.6" y="509.1" class="glyph-pt" fill="var(--p1)">♄</text></g><g class="pt" data-person="christopher" data-body="Uranus" tabindex="0"><circle cx="539.8" cy="155.2" r="11" class="pt-hit"/><text x="539.8" y="155.2" class="glyph-pt" fill="var(--p1)">♅</text></g><g class="pt" data-person="christopher" data-body="Neptune" tabindex="0"><circle cx="405.2" cy="83.7" r="11" class="pt-hit"/><text x="405.2" y="83.7" class="glyph-pt" fill="var(--p1)">♆</text></g><g class="pt" data-person="christopher" data-body="Pluto" tabindex="0"><circle cx="612.1" cy="277.5" r="11" class="pt-hit"/><text x="612.1" y="277.5" class="glyph-pt" fill="var(--p1)">♇</text></g><g class="pt" data-person="christopher" data-body="Chiron" tabindex="0"><circle cx="126.7" cy="505.3" r="11" class="pt-hit"/><text x="126.7" y="505.3" class="glyph-pt" fill="var(--p1)">⚷</text></g><circle cx="281.7" cy="86.7" r="4" fill="var(--p1)" class="asc-dot"/><circle cx="350" cy="350" r="246" class="ring ring-faint"/><text x="575.4" y="365.8" class="band-lab" fill="var(--p2)">Pixie</text><g class="pt" data-person="pixie" data-body="Sun" tabindex="0"><circle cx="437.4" cy="558.4" r="11" class="pt-hit"/><text x="437.4" y="558.4" class="glyph-pt" fill="var(--p2)">☉</text></g><g class="pt" data-person="pixie" data-body="Moon" tabindex="0"><circle cx="574.7" cy="326.1" r="11" class="pt-hit"/><text x="574.7" y="326.1" class="glyph-pt" fill="var(--p2)">☽</text></g><g class="pt" data-person="pixie" data-body="Mercury" tabindex="0"><circle cx="462.6" cy="546.0" r="11" class="pt-hit"/><text x="462.6" y="546.0" class="glyph-pt" fill="var(--p2)">☿</text></g><g class="pt" data-person="pixie" data-body="Venus" tabindex="0"><circle cx="552.3" cy="450.8" r="11" class="pt-hit"/><text x="552.3" y="450.8" class="glyph-pt" fill="var(--p2)">♀</text></g><g class="pt" data-person="pixie" data-body="Mars" tabindex="0"><circle cx="393.4" cy="571.8" r="11" class="pt-hit"/><text x="393.4" y="571.8" class="glyph-pt" fill="var(--p2)">♂</text></g><g class="pt" data-person="pixie" data-body="Jupiter" tabindex="0"><circle cx="458.4" cy="151.7" r="11" class="pt-hit"/><text x="458.4" y="151.7" class="glyph-pt" fill="var(--p2)">♃</text></g><g class="pt" data-person="pixie" data-body="Saturn" tabindex="0"><circle cx="549.7" cy="244.3" r="11" class="pt-hit"/><text x="549.7" y="244.3" class="glyph-pt" fill="var(--p2)">♄</text></g><g class="pt" data-person="pixie" data-body="Uranus" tabindex="0"><circle cx="444.0" cy="144.5" r="11" class="pt-hit"/><text x="444.0" y="144.5" class="glyph-pt" fill="var(--p2)">♅</text></g><g class="pt" data-person="pixie" data-body="Neptune" tabindex="0"><circle cx="361.1" cy="124.3" r="11" class="pt-hit"/><text x="361.1" y="124.3" class="glyph-pt" fill="var(--p2)">♆</text></g><g class="pt" data-person="pixie" data-body="Pluto" tabindex="0"><circle cx="551.8" cy="248.3" r="11" class="pt-hit"/><text x="551.8" y="248.3" class="glyph-pt" fill="var(--p2)">♇</text></g><g class="pt" data-person="pixie" data-body="Chiron" tabindex="0"><circle cx="246.4" cy="550.9" r="11" class="pt-hit"/><text x="246.4" y="550.9" class="glyph-pt" fill="var(--p2)">⚷</text></g><circle cx="568.7" cy="293.0" r="4" fill="var(--p2)" class="asc-dot"/><circle cx="350" cy="350" r="200" class="ring ring-faint"/><text x="529.6" y="362.6" class="band-lab" fill="var(--p3)">Hudson</text><g class="pt" data-person="hudson" data-body="Sun" tabindex="0"><circle cx="189.3" cy="268.9" r="11" class="pt-hit"/><text x="189.3" y="268.9" class="glyph-pt" fill="var(--p3)">☉</text></g><g class="pt" data-person="hudson" data-body="Moon" tabindex="0"><circle cx="179.0" cy="406.2" r="11" class="pt-hit"/><text x="179.0" y="406.2" class="glyph-pt" fill="var(--p3)">☽</text></g><g class="pt" data-person="hudson" data-body="Mercury" tabindex="0"><circle cx="242.6" cy="205.6" r="11" class="pt-hit"/><text x="242.6" y="205.6" class="glyph-pt" fill="var(--p3)">☿</text></g><g class="pt" data-person="hudson" data-body="Venus" tabindex="0"><circle cx="170.1" cy="355.3" r="11" class="pt-hit"/><text x="170.1" y="355.3" class="glyph-pt" fill="var(--p3)">♀</text></g><g class="pt" data-person="hudson" data-body="Mars" tabindex="0"><circle cx="170.1" cy="355.3" r="11" class="pt-hit"/><text x="170.1" y="355.3" class="glyph-pt" fill="var(--p3)">♂</text></g><g class="pt" data-person="hudson" data-body="Jupiter" tabindex="0"><circle cx="478.7" cy="475.8" r="11" class="pt-hit"/><text x="478.7" y="475.8" class="glyph-pt" fill="var(--p3)">♃</text></g><g class="pt" data-person="hudson" data-body="Saturn" tabindex="0"><circle cx="427.3" cy="187.4" r="11" class="pt-hit"/><text x="427.3" y="187.4" class="glyph-pt" fill="var(--p3)">♄</text></g><g class="pt" data-person="hudson" data-body="Uranus" tabindex="0"><circle cx="175.4" cy="394.0" r="11" class="pt-hit"/><text x="175.4" y="394.0" class="glyph-pt" fill="var(--p3)">♅</text></g><g class="pt" data-person="hudson" data-body="Neptune" tabindex="0"><circle cx="184.2" cy="280.0" r="11" class="pt-hit"/><text x="184.2" y="280.0" class="glyph-pt" fill="var(--p3)">♆</text></g><g class="pt" data-person="hudson" data-body="Pluto" tabindex="0"><circle cx="303.9" cy="176.0" r="11" class="pt-hit"/><text x="303.9" y="176.0" class="glyph-pt" fill="var(--p3)">♇</text></g><g class="pt" data-person="hudson" data-body="Chiron" tabindex="0"><circle cx="175.2" cy="307.2" r="11" class="pt-hit"/><text x="175.2" y="307.2" class="glyph-pt" fill="var(--p3)">⚷</text></g><circle cx="525.5" cy="309.9" r="4" fill="var(--p3)" class="asc-dot"/><circle cx="350" cy="350" r="154" class="ring ring-faint"/><text x="483.7" y="359.3" class="band-lab" fill="var(--p4)">Hendrix</text><g class="pt" data-person="hendrix" data-body="Sun" tabindex="0"><circle cx="216.1" cy="354.5" r="11" class="pt-hit"/><text x="216.1" y="354.5" class="glyph-pt" fill="var(--p4)">☉</text></g><g class="pt" data-person="hendrix" data-body="Moon" tabindex="0"><circle cx="480.6" cy="380.0" r="11" class="pt-hit"/><text x="480.6" y="380.0" class="glyph-pt" fill="var(--p4)">☽</text></g><g class="pt" data-person="hendrix" data-body="Mercury" tabindex="0"><circle cx="216.0" cy="350.6" r="11" class="pt-hit"/><text x="216.0" y="350.6" class="glyph-pt" fill="var(--p4)">☿</text></g><g class="pt" data-person="hendrix" data-body="Venus" tabindex="0"><circle cx="222.6" cy="308.6" r="11" class="pt-hit"/><text x="222.6" y="308.6" class="glyph-pt" fill="var(--p4)">♀</text></g><g class="pt" data-person="hendrix" data-body="Mars" tabindex="0"><circle cx="406.3" cy="228.4" r="11" class="pt-hit"/><text x="406.3" y="228.4" class="glyph-pt" fill="var(--p4)">♂</text></g><g class="pt" data-person="hendrix" data-body="Jupiter" tabindex="0"><circle cx="480.3" cy="381.1" r="11" class="pt-hit"/><text x="480.3" y="381.1" class="glyph-pt" fill="var(--p4)">♃</text></g><g class="pt" data-person="hendrix" data-body="Saturn" tabindex="0"><circle cx="381.5" cy="219.8" r="11" class="pt-hit"/><text x="381.5" y="219.8" class="glyph-pt" fill="var(--p4)">♄</text></g><g class="pt" data-person="hendrix" data-body="Uranus" tabindex="0"><circle cx="223.6" cy="394.5" r="11" class="pt-hit"/><text x="223.6" y="394.5" class="glyph-pt" fill="var(--p4)">♅</text></g><g class="pt" data-person="hendrix" data-body="Neptune" tabindex="0"><circle cx="223.8" cy="304.9" r="11" class="pt-hit"/><text x="223.8" y="304.9" class="glyph-pt" fill="var(--p4)">♆</text></g><g class="pt" data-person="hendrix" data-body="Pluto" tabindex="0"><circle cx="310.2" cy="222.1" r="11" class="pt-hit"/><text x="310.2" y="222.1" class="glyph-pt" fill="var(--p4)">♇</text></g><g class="pt" data-person="hendrix" data-body="Chiron" tabindex="0"><circle cx="217.5" cy="330.2" r="11" class="pt-hit"/><text x="217.5" y="330.2" class="glyph-pt" fill="var(--p4)">⚷</text></g><circle cx="475.7" cy="303.6" r="4" fill="var(--p4)" class="asc-dot"/></svg></div>
+    <div>
+      <h3 style="margin-bottom:14px">Where the family piles up</h3>
+      <div class="bigtable">
+        <table>
+          <thead><tr><th>Sign</th><th>Count</th><th>Who</th></tr></thead>
+          <tbody>
+  <tr><td><strong>Aries</strong></td><td class="orb">10</td>
+      <td class="muted">Chris Sun · Chris Mercury · Chris Venus · Hudson Moon · Hudson Venus · Hudson Mars · Hudson Uranus · Hendrix Sun · Hendrix Mercury · Hendrix Uranus</td></tr>
+  <tr><td><strong>Sagittarius</strong></td><td class="orb">7</td>
+      <td class="muted">Chris Neptune · Pixie Jupiter · Pixie Uranus · Pixie Neptune · Hudson Saturn · Hendrix Mars · Hendrix Saturn</td></tr>
+  <tr><td><strong>Pisces</strong></td><td class="orb">6</td>
+      <td class="muted">Hudson Sun · Hudson Neptune · Hudson Chiron · Hendrix Venus · Hendrix Neptune · Hendrix Chiron</td></tr>
+  <tr><td><strong>Cancer</strong></td><td class="orb">4</td>
+      <td class="muted">Chris Mars · Pixie Sun · Pixie Mercury · Pixie Mars</td></tr>
+  <tr><td><strong>Libra</strong></td><td class="orb">4</td>
+      <td class="muted">Chris Pluto · Pixie Moon · Pixie Saturn · Pixie Pluto</td></tr></tbody>
+        </table>
+      </div>
+      <p id="ptread">Click a planet on the wheel.</p>
+      <div class="prose" style="margin-top:10px">
+        <p><strong>Ten planets in Aries across three of you.</strong> Chris has Sun, Mercury and Venus there;
+           Hudson has Moon, Venus, Mars and Uranus; Hendrix has Sun, Mercury and Uranus. Pixie has none.
+           When this family moves, it moves first and discusses later, and Pixie is the only one without a
+           planet in the sign that does that.</p>
+        <p><strong>Six planets in Pisces, all of them the boys.</strong> Hudson's Sun, Neptune and Chiron;
+           Hendrix's Venus, Neptune and Chiron. Both boys carry a Pisces Neptune-Chiron pair. Permeability and
+           woundedness arriving together, in both of them, generationally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pairs">
+  <h2>The Six Pairs</h2>
+  <p class="lead">Every two-person relationship in the household, ranked by how many contacts fall inside one
+     degree. The count is not a score for the relationship. It is a measure of how much of it is automatic
+     versus how much of it gets built on purpose.</p>
+  
+  <article class="pair" id="pair-christopher__pixie">
+    <header class="pair-head">
+      <h3>Christopher and Pixie</h3>
+      <div class="pair-stats">
+        <span><strong>51</strong> contacts</span>
+        <span><strong>15</strong> inside 1°</span>
+        <span class="muted">tightest 0°</span>
+      </div>
+    </header>
+    <div class="pair-body">
+      <div class="prose">
+    <p><strong>Your Ascendants are square to each other at six hundredths of a degree.</strong> Yours is Capricorn
+       14°32'. Hers is Libra 14°36'. Both cardinal, both at the same degree, ninety degrees apart. You two
+       literally meet the world at a right angle to one another: you through structure and the long climb, she
+       through relationship and balance. A square is the aspect of productive friction, and this one is as close
+       to exact as this family gets. Nineteen years in, that is not a problem to solve. It is the engine.</p>
+    <p><strong>Your North Node sits on her Moon at 0.19°.</strong> The North Node is the direction of growth, the
+       unfamiliar thing you came here to move toward. Hers is the Moon: instinct, need, the way she self-soothes.
+       Of every contact in these four charts, this is the one I would put a frame around. Your growth direction and
+       her emotional nature are the same point in the sky, within a fifth of a degree. Astrology does not get to
+       claim credit for your marriage, but it is not being coy about it either.</p>
+    <p><strong>Mars square Pluto at 0.00°, and Venus opposite Pluto at 0.20°.</strong> Your drive and your capacity
+       for love both run straight into her Pluto, the planet of power and irreversible change. Exact. Twice. This is
+       the signature of a relationship that rearranges both people rather than accommodating them, which matches the
+       record: December 2020 is in both of your charts as geometry, not just as memory.</p>
+    <p class="softer">Fifteen contacts inside one degree, the most of any pair here by a wide margin.</p></div>
+      <div class="pair-table">
+        <table>
+          <thead><tr><th colspan="3">Contact</th><th>Aspect</th><th>Orb</th><th>Sense</th></tr></thead>
+          <tbody>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Mars</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Pluto</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:1"></span>0°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> ASC</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> ASC</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.99"></span>0.06°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> North Node</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Moon</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.969"></span>0.19°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Venus</td>
+      <td class="g" style="color:var(--asp-hard)">☍</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Pluto</td>
+      <td><strong>Opposition</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.967"></span>0.2°</td>
+      <td class="muted work">a seesaw: each of you carries one end of the same axis</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Venus</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Neptune</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.958"></span>0.25°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Uranus</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> MC</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.958"></span>0.25°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> North Node</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Uranus</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.909"></span>0.45°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Pluto</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> MC</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.913"></span>0.52°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Saturn</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> North Node</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.885"></span>0.58°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Jupiter</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Saturn</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.9"></span>0.6°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Mercury</td>
+      <td class="g" style="color:var(--asp-hard)">☍</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Pluto</td>
+      <td><strong>Opposition</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.883"></span>0.7°</td>
+      <td class="muted work">a seesaw: each of you carries one end of the same axis</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Sun</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Mars</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.873"></span>0.76°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr></tbody>
+        </table>
+        <p class="muted tiny">Twelve tightest of 51. Major aspects only, 6° cap.</p>
+      </div>
+    </div>
+  </article>
+  <article class="pair" id="pair-christopher__hudson">
+    <header class="pair-head">
+      <h3>Christopher and Hudson</h3>
+      <div class="pair-stats">
+        <span><strong>53</strong> contacts</span>
+        <span><strong>12</strong> inside 1°</span>
+        <span class="muted">tightest 0.04°</span>
+      </div>
+    </header>
+    <div class="pair-body">
+      <div class="prose">
+    <p><strong>A double Moon-Neptune exchange, both nearly exact.</strong> Your Moon sextiles his Neptune at 0.04°,
+       and your Neptune trines his Moon at 0.08°. Mutual, reciprocal, and tighter than almost anything else in the
+       family. Moon to Neptune is the wordless register: dreams, atmosphere, the thing felt before it is said. You
+       and Hudson have a channel open that does not route through language at all, and it runs both directions.</p>
+    <p><strong>Your Ascendant conjunct his Pluto at 0.29°, and opposite his Midheaven at 0.46°.</strong> Your
+       physical presence sits exactly on his Pluto, and exactly opposite the point in his chart that describes his
+       public purpose. Translation worth sitting with: to Hudson, you are not a neutral figure. You are the
+       transformative one, and you are the horizon he orients his sense of vocation against.</p>
+    <p><strong>Your Sun opposite his North Node at 0.16°.</strong> Your core identity is exactly opposed to his
+       direction of growth. Read gently, this is the classic parent-child signature where the child's work is to
+       develop precisely what the parent already embodies, which means they have to find their own route to it
+       rather than inherit yours.</p></div>
+      <div class="pair-table">
+        <table>
+          <thead><tr><th colspan="3">Contact</th><th>Aspect</th><th>Orb</th><th>Sense</th></tr></thead>
+          <tbody>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Moon</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Neptune</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.992"></span>0.04°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Neptune</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Moon</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.987"></span>0.08°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Uranus</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Jupiter</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.984"></span>0.1°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Sun</td>
+      <td class="g" style="color:var(--asp-hard)">☍</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> North Node</td>
+      <td><strong>Opposition</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.974"></span>0.16°</td>
+      <td class="muted work">a seesaw: each of you carries one end of the same axis</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Pluto</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Jupiter</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.965"></span>0.17°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> ASC</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Pluto</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.951"></span>0.29°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> ASC</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Uranus</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.933"></span>0.4°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> ASC</td>
+      <td class="g" style="color:var(--asp-hard)">☍</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> MC</td>
+      <td><strong>Opposition</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.924"></span>0.46°</td>
+      <td class="muted work">a seesaw: each of you carries one end of the same axis</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Uranus</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Chiron</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.915"></span>0.51°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Pluto</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Pluto</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.893"></span>0.64°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> North Node</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Mercury</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.874"></span>0.75°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Uranus</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Pluto</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.818"></span>0.91°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr></tbody>
+        </table>
+        <p class="muted tiny">Twelve tightest of 53. Major aspects only, 6° cap.</p>
+      </div>
+    </div>
+  </article>
+  <article class="pair" id="pair-pixie__hudson">
+    <header class="pair-head">
+      <h3>Pixie and Hudson</h3>
+      <div class="pair-stats">
+        <span><strong>53</strong> contacts</span>
+        <span><strong>11</strong> inside 1°</span>
+        <span class="muted">tightest 0.23°</span>
+      </div>
+    </header>
+    <div class="pair-body">
+      <div class="prose">
+    <p><strong>Her Venus opposite his Sun at 0.28°, and her Chiron square his Sun at 0.51°.</strong> Her capacity for
+       love sits directly across from his core identity, and her wound sits at right angles to it. Both inside a
+       degree. Opposition is not conflict here so much as mirroring: she sees him, specifically and completely, and
+       what he is becomes a live question for the part of her that was hurt.</p>
+    <p><strong>Jupiter trine his Venus at 0.33° and his Mars at 0.34°.</strong> Hudson has Venus conjunct Mars at
+       0.01°, the tightest single aspect in any of these four charts, and Pixie's Jupiter trines the whole package
+       at a third of a degree. She expands exactly the fused place where his love and his drive are the same
+       instinct. That is a mother who makes a particular kind of room.</p>
+    <p><strong>Her Ascendant opposite his Uranus at 0.46°, square his Midheaven at 0.52°.</strong> He disrupts her
+       interface and tugs at her public orientation. Teenagers will do that regardless; his chart has it drawn in.</p></div>
+      <div class="pair-table">
+        <table>
+          <thead><tr><th colspan="3">Contact</th><th>Aspect</th><th>Orb</th><th>Sense</th></tr></thead>
+          <tbody>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> ASC</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Pluto</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.961"></span>0.23°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> MC</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Chiron</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.956"></span>0.26°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Venus</td>
+      <td class="g" style="color:var(--asp-hard)">☍</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Sun</td>
+      <td><strong>Opposition</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.953"></span>0.28°</td>
+      <td class="muted work">a seesaw: each of you carries one end of the same axis</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Jupiter</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Venus</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.945"></span>0.33°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Jupiter</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Mars</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.943"></span>0.34°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> ASC</td>
+      <td class="g" style="color:var(--asp-hard)">☍</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Uranus</td>
+      <td><strong>Opposition</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.923"></span>0.46°</td>
+      <td class="muted work">a seesaw: each of you carries one end of the same axis</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Chiron</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Sun</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.915"></span>0.51°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> ASC</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> MC</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.914"></span>0.52°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Moon</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Mercury</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.905"></span>0.57°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Mars</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> North Node</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.9"></span>0.6°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Uranus</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Saturn</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.859"></span>0.85°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Chiron</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Mars</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.792"></span>1.04°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr></tbody>
+        </table>
+        <p class="muted tiny">Twelve tightest of 53. Major aspects only, 6° cap.</p>
+      </div>
+    </div>
+  </article>
+  <article class="pair" id="pair-pixie__hendrix">
+    <header class="pair-head">
+      <h3>Pixie and Hendrix</h3>
+      <div class="pair-stats">
+        <span><strong>47</strong> contacts</span>
+        <span><strong>10</strong> inside 1°</span>
+        <span class="muted">tightest 0.29°</span>
+      </div>
+    </header>
+    <div class="pair-body">
+      <div class="prose">
+    <p><strong>Her Sun conjunct his Midheaven at 0.45°.</strong> The Midheaven is vocation, public role, what a person
+       is visibly for. Her core identity sits on it, within half a degree. However Hendrix comes to understand what
+       he is here to do, Pixie is standing at that exact point in his sky. Of all the parent-child contacts in this
+       family, this is the most structurally direct.</p>
+    <p><strong>Her Uranus conjunct his Mars at 0.29°.</strong> Her disruptive, liberating, will-not-be-tamed function
+       is fused to his drive. She activates him. Expect this to look like both ignition and friction, depending
+       entirely on the week.</p>
+    <p><strong>Mercury trine Mercury at 0.38°, Jupiter trine his Sun at 0.60°, Chiron sextile his Sun at 0.78°.</strong>
+       Their minds flow in the same direction, she expands who he is, and her wound opens a door to him rather than
+       standing in his way. Ten contacts inside one degree, against your three. Where you and Hendrix are
+       transpersonal, Pixie and Hendrix are personal and warm.</p></div>
+      <div class="pair-table">
+        <table>
+          <thead><tr><th colspan="3">Contact</th><th>Aspect</th><th>Orb</th><th>Sense</th></tr></thead>
+          <tbody>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Uranus</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Mars</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.951"></span>0.29°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Mercury</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Mercury</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.936"></span>0.38°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Sun</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> MC</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.925"></span>0.45°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> MC</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Jupiter</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.885"></span>0.57°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Jupiter</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Sun</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.9"></span>0.6°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Mars</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Neptune</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.877"></span>0.74°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Chiron</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Sun</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.844"></span>0.78°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Sun</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> North Node</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.819"></span>0.91°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Moon</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Mars</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.814"></span>0.93°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Mars</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Venus</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.843"></span>0.94°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> Jupiter</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Mercury</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.819"></span>1.09°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p2)">Pixie</span> MC</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Moon</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.781"></span>1.1°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr></tbody>
+        </table>
+        <p class="muted tiny">Twelve tightest of 47. Major aspects only, 6° cap.</p>
+      </div>
+    </div>
+  </article>
+  <article class="pair" id="pair-hudson__hendrix">
+    <header class="pair-head">
+      <h3>Hudson and Hendrix</h3>
+      <div class="pair-stats">
+        <span><strong>50</strong> contacts</span>
+        <span><strong>8</strong> inside 1°</span>
+        <span class="muted">tightest 0.15°</span>
+      </div>
+    </header>
+    <div class="pair-body">
+      <div class="prose">
+    <p><strong>Hudson's exact Venus-Mars conjunction lands on Hendrix's Sun.</strong> Venus conjunct Hendrix's Sun at
+       0.27°, Mars conjunct it at 0.26°, and those two are fused in Hudson's own chart at 0.01°. The single tightest
+       structure Hudson owns points straight at who his brother is. Love and aggression arriving as one undivided
+       impulse, aimed at Hendrix's core identity. Anyone who has watched two brothers knows exactly what that looks
+       like from the outside.</p>
+    <p><strong>Hudson's Chiron square Hendrix's Saturn at 0.15°, opposite his Jupiter at 0.31°, opposite his Moon at
+       0.83°.</strong> Hudson's wound is in a tight three-way argument with Hendrix's structure, his faith and his
+       instinct. This is the aspect set I would watch. It does not predict anything, but it does say the friction
+       between them is not random noise, and that Hudson's sore place is where it tends to land.</p>
+    <p><strong>Hudson's Saturn conjunct Hendrix's Mars at 0.55°, Moon conjunct Hendrix's Uranus at 1.19°.</strong>
+       The older brother is a limit on the younger one's drive, and the younger one disrupts the older one's
+       instinct. Birth order written in longitude.</p></div>
+      <div class="pair-table">
+        <table>
+          <thead><tr><th colspan="3">Contact</th><th>Aspect</th><th>Orb</th><th>Sense</th></tr></thead>
+          <tbody>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Chiron</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Saturn</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.975"></span>0.15°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Mars</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Sun</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.957"></span>0.26°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Venus</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Sun</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.956"></span>0.27°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Chiron</td>
+      <td class="g" style="color:var(--asp-hard)">☍</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Jupiter</td>
+      <td><strong>Opposition</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.948"></span>0.31°</td>
+      <td class="muted work">a seesaw: each of you carries one end of the same axis</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Saturn</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Mars</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.908"></span>0.55°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Jupiter</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Saturn</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.874"></span>0.76°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Chiron</td>
+      <td class="g" style="color:var(--asp-hard)">☍</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Moon</td>
+      <td><strong>Opposition</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.861"></span>0.83°</td>
+      <td class="muted work">a seesaw: each of you carries one end of the same axis</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Moon</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Pluto</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.849"></span>0.91°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Chiron</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Pluto</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.79"></span>1.05°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Moon</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Uranus</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.802"></span>1.19°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Venus</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Mercury</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.764"></span>1.42°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p3)">Hudson</span> Mars</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Mercury</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.762"></span>1.43°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr></tbody>
+        </table>
+        <p class="muted tiny">Twelve tightest of 50. Major aspects only, 6° cap.</p>
+      </div>
+    </div>
+  </article>
+  <article class="pair" id="pair-christopher__hendrix">
+    <header class="pair-head">
+      <h3>Christopher and Hendrix</h3>
+      <div class="pair-stats">
+        <span><strong>44</strong> contacts</span>
+        <span><strong>3</strong> inside 1°</span>
+        <span class="muted">tightest 0.75°</span>
+      </div>
+    </header>
+    <div class="pair-body">
+      <div class="prose">
+    <p><strong>This is the quietest pair in the family, and the data says so clearly.</strong> Forty-four contacts,
+       only three of them inside one degree, and the tightest is 0.75°. Compare Pixie at fifteen, Hudson at twelve.
+       That is not a judgement about love. It is a statement about the kind of contact available.</p>
+    <p><strong>And look at which planets do the talking.</strong> Every one of your close contacts with Hendrix runs
+       through your outer planets: your North Node to his Mars, your Uranus to his Jupiter, your Pluto to his Saturn,
+       your Neptune to his Uranus and his Moon. Not Sun to Sun. Not Moon to Moon. Not Venus, not Mercury. The
+       personal planets, the ones that make two people feel instantly recognisable to each other, are largely
+       silent between you.</p>
+    <p><strong>What that actually means in practice:</strong> the easy, automatic, no-effort recognition you have
+       with Hudson is not the medium you and Hendrix are working in. Yours is transpersonal: you touch his drive,
+       his faith, his structure and his instinct through the slow planets, the ones that work by weather rather
+       than by conversation. It is a relationship that gets built, deliberately, over time, rather than one that
+       arrives pre-assembled. If you have ever had the quiet feeling that Hudson is easier to read, the chart is
+       not going to argue with you. It is going to tell you that Hendrix needs the deliberate version.</p>
+    <p class="softer">Worth saying plainly: Hendrix is the one whose birth time was wrong in this system for three
+       weeks, the one with the most fragmented Human Design definition in the family, and the one with the fewest
+       close contacts to you. None of those three facts cause each other. All three point the same direction.</p></div>
+      <div class="pair-table">
+        <table>
+          <thead><tr><th colspan="3">Contact</th><th>Aspect</th><th>Orb</th><th>Sense</th></tr></thead>
+          <tbody>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> North Node</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Mars</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.851"></span>0.75°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Uranus</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Jupiter</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.835"></span>0.82°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Pluto</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Saturn</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.814"></span>0.93°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Neptune</td>
+      <td class="g" style="color:var(--asp-soft)">△</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Uranus</td>
+      <td><strong>Trine</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.816"></span>1.11°</td>
+      <td class="muted work">flow: this comes free and is easy to take for granted</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Neptune</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Moon</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.799"></span>1.2°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Uranus</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Moon</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.731"></span>1.35°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Uranus</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Pluto</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.688"></span>1.56°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Neptune</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Jupiter</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.712"></span>1.73°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Jupiter</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Mercury</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.705"></span>1.77°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Pluto</td>
+      <td class="g" style="color:var(--asp-hard)">□</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Pluto</td>
+      <td><strong>Square</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.695"></span>1.83°</td>
+      <td class="muted work">friction that builds: the place the relationship does its work</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Neptune</td>
+      <td class="g" style="color:var(--asp-conj)">☌</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> Saturn</td>
+      <td><strong>Conjunction</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.685"></span>1.89°</td>
+      <td class="muted work">fused: these two functions act as one between you</td>
+    </tr>
+    <tr>
+      <td><span class="who" style="color:var(--p1)">Chris</span> Neptune</td>
+      <td class="g" style="color:var(--asp-soft)">⚹</td>
+      <td><span class="who" style="color:var(--p4)">Hendrix</span> ASC</td>
+      <td><strong>Sextile</strong></td>
+      <td class="orb"><span class="orbbar" style="--s:0.609"></span>1.95°</td>
+      <td class="muted work">an open door: available, but only if someone walks through it</td>
+    </tr></tbody>
+        </table>
+        <p class="muted tiny">Twelve tightest of 44. Major aspects only, 6° cap.</p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section id="balance">
+  <h2>Family Balance</h2>
+  <p class="lead">Forty-four placements across four people: ten planets plus Chiron each.</p>
+  <h3 style="margin:26px 0 10px">Elements</h3>
+  
+  <div class="bar-row">
+    <span class="bar-lab">Fire</span>
+    <span class="bar-track"><span class="bar-fill" style="--pct:43.2%"></span></span>
+    <span class="bar-val">19</span>
+    <span class="bar-note muted">spirit, drive, forward motion</span>
+  </div>
+  <div class="bar-row">
+    <span class="bar-lab">Water</span>
+    <span class="bar-track"><span class="bar-fill" style="--pct:25.0%"></span></span>
+    <span class="bar-val">11</span>
+    <span class="bar-note muted">feeling, memory, depth</span>
+  </div>
+  <div class="bar-row">
+    <span class="bar-lab">Earth</span>
+    <span class="bar-track"><span class="bar-fill" style="--pct:15.9%"></span></span>
+    <span class="bar-val">7</span>
+    <span class="bar-note muted">body, form, consequence</span>
+  </div>
+  <div class="bar-row">
+    <span class="bar-lab">Air</span>
+    <span class="bar-track"><span class="bar-fill" style="--pct:15.9%"></span></span>
+    <span class="bar-val">7</span>
+    <span class="bar-note muted">mind, language, relation</span>
+  </div>
+  <h3 style="margin:30px 0 10px">Modalities</h3>
+  
+  <div class="bar-row">
+    <span class="bar-lab">Cardinal</span>
+    <span class="bar-track"><span class="bar-fill" style="--pct:47.7%"></span></span>
+    <span class="bar-val">21</span>
+    <span class="bar-note muted">starts things</span>
+  </div>
+  <div class="bar-row">
+    <span class="bar-lab">Mutable</span>
+    <span class="bar-track"><span class="bar-fill" style="--pct:40.9%"></span></span>
+    <span class="bar-val">18</span>
+    <span class="bar-note muted">adapts to things</span>
+  </div>
+  <div class="bar-row">
+    <span class="bar-lab">Fixed</span>
+    <span class="bar-track"><span class="bar-fill" style="--pct:11.4%"></span></span>
+    <span class="bar-val">5</span>
+    <span class="bar-note muted">holds things</span>
+  </div>
+  <div class="note">
+    <strong>Five fixed placements out of forty-four.</strong> Twenty-one cardinal, eighteen mutable, five fixed.
+    This is a household built to start things and adapt to things, and almost not built to hold things. Nineteen
+    fire placements against seven earth. If routines, containers and follow-through feel like the hardest part of
+    family life, that is not a character flaw distributed across four people. It is the elemental weather of the
+    house, and it is the argument for the system doing the holding rather than any of you.
+  </div>
+</section>
+
+<section id="composite">
+  <h2>The Composite</h2>
+  <p class="lead">The circular mean of all four charts, body by body. Concentration is how tightly the four of you
+     agree on that planet: high means you cluster, low means you are scattered around the wheel and the midpoint
+     is close to meaningless.</p>
+  <div class="bigtable">
+    <table>
+      <thead><tr><th>Body</th><th>Family midpoint</th><th>Concentration</th></tr></thead>
+      <tbody>
+  <tr><td><strong>Sun</strong></td><td>Aries 15°23'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.646"></span>65%</td></tr>
+  <tr><td><strong>Moon</strong></td><td>Scorpio 2°08'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.264"></span>26%</td></tr>
+  <tr><td><strong>Mercury</strong></td><td>Aries 14°16'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.515"></span>52%</td></tr>
+  <tr><td><strong>Venus</strong></td><td>Aries 17°38'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.511"></span>51%</td></tr>
+  <tr><td><strong>Mars</strong></td><td>Cancer 3°36'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.25"></span>25%</td></tr>
+  <tr><td><strong>Jupiter</strong></td><td>Virgo 3°48'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.597"></span>60%</td></tr>
+  <tr><td><strong>Saturn</strong></td><td>Scorpio 6°41'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.736"></span>74%</td></tr>
+  <tr><td><strong>Uranus</strong></td><td>Aquarius 7°18'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.33"></span>33%</td></tr>
+  <tr><td><strong>Neptune</strong></td><td>Aquarius 0°47'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.787"></span>79%</td></tr>
+  <tr><td><strong>Pluto</strong></td><td>Sagittarius 3°42'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.736"></span>74%</td></tr>
+  <tr><td><strong>Chiron</strong></td><td>Aries 18°21'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.853"></span>85%</td></tr>
+  <tr><td><strong>North Node</strong></td><td>Virgo 13°28'</td>
+      <td class="orb"><span class="orbbar" style="--s:0.75"></span>75%</td></tr></tbody>
+    </table>
+  </div>
+  <div class="note">
+    <strong>Read the concentration column before the sign column.</strong> Chiron at 85%, Neptune at 79%, Pluto
+    and Saturn at 74%: the four of you genuinely cluster on the slow planets, which is what you would expect from
+    two generations born inside forty years. The Moon at 26% and Mars at 25% mean the opposite. Your emotional
+    needs and your styles of anger are spread right around the wheel, and the family midpoint for those is an
+    arithmetic artifact rather than a real place. That is the honest version: this family has a shared horizon
+    and four genuinely different nervous systems.
+  </div>
+</section>
+
+<section id="howto">
+  <h2>How to Read This</h2>
+  <div class="prose" style="max-width:68ch">
+    <p><strong>Synastry is not compatibility scoring.</strong> A tight square is not a warning and a tight trine is
+       not a blessing. The orb tells you how loud a contact is, not whether it is good. Chris and Pixie have the
+       most contacts inside one degree of any pair here, including an exact Mars-Pluto square, and they have been
+       together since 2006.</p>
+    <p><strong>Count the personal planets separately from the outer ones.</strong> Sun, Moon, Mercury, Venus and
+       Mars contacts create the feeling of instant recognition. Jupiter, Saturn, Uranus, Neptune and Pluto contacts
+       work by weather: slower, structural, felt over years rather than minutes. Two people can have forty contacts
+       and almost no personal-planet contact, which produces a real bond that simply does not arrive pre-assembled.
+       That is the Chris and Hendrix situation, and it is the single most actionable thing on this page.</p>
+    <p><strong>The angles matter more than most people expect.</strong> Ascendant and Midheaven contacts are about
+       the actual spot of ground someone was born on at a specific minute. They are the most time-sensitive points
+       in any chart, which means they are also the first thing to go wrong when a birth time is off by an hour.
+       Three weeks of this family's chart data said Hendrix had a Scorpio Ascendant. It did not.</p>
+    <p class="muted" style="font-size:.86rem">Every number on this page is computed from the four birth records.
+       The prose is interpretation and is labelled as such by being prose. Where a sentence makes a claim about
+       geometry, the orb is printed next to it so you can check it.</p>
+  </div>
+</section>
+
+<footer>
+  Computed 2026-10-03 · astronomy-engine 2.1.19 (ACE bundled) + ACE src/astro Placidus · house system: Placidus<br>
+  285 cross-contacts across six pairs. Engine validated 57/57 against the independent astro.com import on file.<br>
+  Private: this file lives in the gitignored local lane and is never committed.
+</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('tb');
+  btn.addEventListener('click',function(){
+    var t=root.getAttribute('data-theme');
+    root.setAttribute('data-theme', t==='dark'?'light':t==='light'?'auto':'dark');
+    btn.textContent=root.getAttribute('data-theme');
+  });
+  var NAMES={christopher:'Christopher',pixie:'Pixie',hudson:'Hudson',hendrix:'Hendrix'};
+  var svg=document.querySelector('svg.wheel');
+  var pts=[].slice.call(svg.querySelectorAll('.pt'));
+  var read=document.getElementById('ptread');
+  var active=null;
+  function show(person){
+    if(!person){ svg.classList.remove('dim'); pts.forEach(function(p){p.classList.remove('on')});
+      read.textContent='Click a planet on the wheel.'; return; }
+    svg.classList.add('dim');
+    pts.forEach(function(p){ p.classList.toggle('on', p.dataset.person===person) });
+    read.textContent=NAMES[person]+' isolated — '+pts.filter(function(p){return p.dataset.person===person}).length+' placements';
+  }
+  pts.forEach(function(g){
+    function go(){ var pr=g.dataset.person; active=(active===pr)?null:pr; show(active); }
+    g.addEventListener('click',go);
+    g.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();go()} });
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){active=null;show(null)} });
+})();
+</script>
+</body>
+</html>
